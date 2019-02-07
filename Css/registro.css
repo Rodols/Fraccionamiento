@@ -1,0 +1,35 @@
+td, th, table
+/* Todas las celdas de la tabla... */
+
+    {
+    border: 2px solid black;
+    /* tendrá un borde de 1 px */
+}
+body {
+    background-image: url("../Imagenes/skulls.png");
+    color: #2b2b2b !important;
+    font-weight: bold;
+}
+.container-fluid {
+    color: white !important;
+    background-color: #2b2b2b !important;
+}
+h1, h2, h3, h4,h5 {
+    color: #DF0101 !important;
+    font-weight: bold;
+}
+.navbar-r:link {
+    color: #FF5722 !important;
+}
+.navbar-r:visited {
+    color: white !important;
+}
+.navbar-r:hover, .navbar-r:active {
+    color: #FF5722 !important;
+}
+.navbar-brand:link, .navbar-brand:visited {
+    color: #FF5722 !important;
+}
+.navbar-brand:hover, .navbar-brand:active {
+    color: #FF5722 !important;
+}
