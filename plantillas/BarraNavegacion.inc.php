@@ -19,6 +19,7 @@ $tipo = $_SESSION['tipo'];
 				<ul class="nav navbar-nav">
 					<li><a class="navbar-r" href="registro.php">RegistroDeEntrada</a></li>
 					<li><a class="navbar-r" href="consulta.php">RegistroDeSalida</a></li>
+					<li><a  class="navbar-r" href="visitas.php">Visitantes</a></li>
 					<li><a  class="navbar-r" href="bitacora.php">Bitacora</a></li>
 				</ul>
 
