@@ -154,6 +154,17 @@ if (isset($_POST['btn1'])) {
                 alert(\"Ocurrio un error..Porfavor vuelve a intentarlo\")
                 </script>
         ";
+        $buscarGafete = mysqli_query($conexion, "SELECT * FROM $tabla_db1 WHERE codigo = $codigo");
+        while ($encontrado = mysqli_fetch_array($buscarGafete)) {
+        if(isset($encontrado[0])){
+            echo "
+            <script>
+            alert(\"El gafete ya esta ocupado..Porfavor vuelve a intentarlo\")
+            </script>
+    ";
+        }
+        }
+
         }
     } else {
         echo "
