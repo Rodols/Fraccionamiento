@@ -45,10 +45,10 @@ if (isset($_POST['btnFiltro'])) {
     include_once "abrir_conexion.php";
 
     if (($columna == "todos") && ($buscar_text == "")) {
-        $resultados = mysqli_query($conexion, "SELECT * FROM $tabla_db1 ");
+        $resultados = mysqli_query($conexion, "SELECT * FROM $tabla_db1 ORDER BY fecha DESC");
     }
     if (($columna != "todos") && ($buscar_text != "")) {
-        $resultados = mysqli_query($conexion, "SELECT * FROM $tabla_db1  WHERE $columna = '$buscar_text'");
+        $resultados = mysqli_query($conexion, "SELECT * FROM $tabla_db1  WHERE $columna = '$buscar_text' ORDER BY fecha DESC ");
     }
     while ($consulta = mysqli_fetch_array($resultados)) {
         if ($consulta['placas'] != "") {
