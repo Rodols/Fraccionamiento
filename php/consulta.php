@@ -220,9 +220,9 @@ if (isset($_POST['btnSalida'])) {
 
 	
 	 $respuesta = $conexion->query("INSERT INTO $tabla_db3 (
-				visitante,usuario,fecha,entrada,salida,nombre,nombre_ref,calle,numero,placas,motivo_visita,observaciones,
+				visitante,codigo,usuario,fecha,entrada,salida,nombre,nombre_ref,calle,numero,placas,motivo_visita,observaciones,
 				imagen_rostro,imagen_credencial,imagen_coche)
-				 values (Null,'$user','$fecha','$entrada',NOW(),'$nombre','$nombre_ref','$calle','$numero','$placas','$motivo',
+				 values (Null,'$codigo','$user','$fecha','$entrada',NOW(),'$nombre','$nombre_ref','$calle','$numero','$placas','$motivo',
 				 '$observacion','$foto_r','$foto_c','$foto_v')");
 
     if ($respuesta==true) {

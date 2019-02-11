@@ -1,7 +1,7 @@
 
 USE id8656024_visitas;
 CREATE TABLE Visitas(
-		codigo INT NOT NULL,
+		codigo VARCHAR(20) NOT NULL,
 		usuario VARCHAR(20) NOT NULL,
 		fecha  DATE NOT NULL,
 		entrada TIME NOT NULL,
@@ -20,6 +20,7 @@ CREATE TABLE Visitas(
 );
 CREATE TABLE Bitacora(
 		visitante 	INT NOT NULL AUTO_INCREMENT,
+		codigo VARCHAR(20) NOT NULL,
 		usuario VARCHAR(20) NOT NULL,
 		fecha DATE NOT NULL,
 		entrada TIME NOT NULL,
