@@ -40,6 +40,14 @@ include_once '../plantillas/BarraNavegacion.inc.php';
 </div>
 <?php
 if (isset($_POST['btnFiltro'])) {
+	echo "
+	ventana = window.open(\"http://www.manualweb.net\", \"nuevo\", \"width=400,height=400\");
+	setTimeout(cerrarVentana,5000);
+	function cerrarVentana(){
+		ventana.close();
+   }
+   ";
+
     $buscar_text = $_POST['buscarVisitas'];
     $columna     = $_POST['selectBusqueda'];
     include_once "abrir_conexion.php";
