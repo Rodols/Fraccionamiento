@@ -72,7 +72,7 @@ if (isset($_POST['btnFiltro'])) {
 						<tr align=\"center\">
 						<td width=\"100\" nowrap>" . $consulta['codigo'] . "</td>
 						<td width=\"90\" nowrap>" . $consulta['usuario'] . "</td>
-						<td width=\"90\" nowrap>" . $consulta['fecha'] .'<br/>'. $consulta['entrada'] ."</td>
+						<td width=\"100\" nowrap>" . $consulta['fecha'] .'<br/>'. $consulta['entrada'] ."</td>
 						<td width=\"170\" nowrap>" . $consulta['nombre'] . "</td>
 						<td width=\"170\" nowrap>" . $consulta['nombre_ref'] . "</td>
 						<td width=\"170\" nowrap>" . $consulta['calle'] .' #'. $consulta['numero'] ."</td>
@@ -95,6 +95,7 @@ if (isset($_POST['btnFiltro'])) {
 						<th><b><center>Nombre</center></b></th>
 						<th><b><center>Visita a</center></b></th>
 						<th><b><center>Dirección que visita</center></b></th>
+						<th><b><center>Placas</center></b></th>
 						<th><b><center>MotivoVisita</center></b></th>
 						<th><b><center>Observaciones</center></b></th>
 						<th><b><center>CapturaRostro</center></b></th>
@@ -103,10 +104,11 @@ if (isset($_POST['btnFiltro'])) {
 						<tr align=\"center\">
 						<td width=\"100\" nowrap>" . $consulta['codigo'] . "</td>
 						<td width=\"90\" nowrap>" . $consulta['usuario'] . "</td>
-						<td width=\"90\" nowrap>" . $consulta['fecha'] .'<br/>'. $consulta['entrada'] ."</td>
+						<td width=\"100\" nowrap>" . $consulta['fecha'] .'<br/>'. $consulta['entrada'] ."</td>
 						<td width=\"170\" nowrap>" . $consulta['nombre'] . "</td>
 						<td width=\"170\" nowrap>" . $consulta['nombre_ref'] . "</td>
 						<td width=\"170\" nowrap>" . $consulta['calle'] .' #'. $consulta['numero'] ."</td>
+						<td width=\"100\" nowrap>" . 'Sin vehiculo'. "</td>
 						<td width=\"230\" nowrap>" . $consulta['motivo_visita'] . "</td>
 						<td width=\"230\" nowrap>" . $consulta['observaciones'] . "</td>
 						<td width=\"200\" nowrap><img src='$consulta[imagen_rostro]'  width=\"200\" heigth=\"300\" name=\"foto_r\" /></td>
