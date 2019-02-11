@@ -16,8 +16,14 @@ body {
 }
 h1, h2, h3, h4,h5 {
     color: #DF0101 !important;
-    font-weight: bold;
+    font-weight: bold ;
 }
+
+.titulo {
+color:blue;
+font-weight: bold;
+}
+
 .navbar-r:link {
     color: #FF5722 !important;
 }
