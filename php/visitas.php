@@ -59,9 +59,9 @@ if (isset($_POST['btnFiltro'])) {
 						<th><b><center>Gafete</center></b></th>
 						<th><b><center>Usuario</center></b></th>
 						<th><b><center>Entrada</center></b></th>
-						<th><b><center>NombreVisitante</center></b></th>
-						<th><b><center>PersonaQueVisita</center></b></th>
-						<th><b><center>Direccion</center></b></th>
+						<th><b><center>Nombre</center></b></th>
+						<th><b><center>Visita a</center></b></th>
+						<th><b><center>Dirección que visita</center></b></th>
 						<th><b><center>Placas</center></b></th>
 						<th><b><center>MotivoVisita</center></b></th>
 						<th><b><center>Observaciones</center></b></th>
@@ -92,9 +92,9 @@ if (isset($_POST['btnFiltro'])) {
 						<th><b><center>Gafete</center></b></th>
 						<th><b><center>Usuario</center></b></th>
 						<th><b><center>Entrada</center></b></th>
-						<th><b><center>NombreVisitante</center></b></th>
-						<th><b><center>PersonaQueVisita</center></b></th>
-						<th><b><center>Direccion</center></b></th>
+						<th><b><center>Nombre</center></b></th>
+						<th><b><center>Visita a</center></b></th>
+						<th><b><center>Dirección que visita</center></b></th>
 						<th><b><center>MotivoVisita</center></b></th>
 						<th><b><center>Observaciones</center></b></th>
 						<th><b><center>CapturaRostro</center></b></th>
