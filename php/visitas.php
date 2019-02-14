@@ -41,11 +41,13 @@ include_once '../plantillas/BarraNavegacion.inc.php';
 <?php
 if (isset($_POST['btnFiltro'])) {
 	echo "
-	ventana = window.open(\"http://www.manualweb.net\", \"nuevo\", \"width=400,height=400\");
-	setTimeout(cerrarVentana,5000);
+	<script>
+	ventana = window.open(\"http://192.168.1.82/LED=ON\", \"nuevo\", \"width=400,height=400\");
+	setTimeout(cerrarVentana,1000);
 	function cerrarVentana(){
 		ventana.close();
    }
+   </script>
    ";
 
     $buscar_text = $_POST['buscarVisitas'];
