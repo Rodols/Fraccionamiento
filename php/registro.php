@@ -14,9 +14,9 @@ if ($_SESSION['session_exito'] != 1) {
             <h4><strong>Xalapa Ver,a <?=$fechaActual;?></strong></h4><br>
         </center>
  <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
         </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
         <form method="POST" action="registro.php" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="cod">Codigo</label>
@@ -96,7 +96,7 @@ if ($_SESSION['session_exito'] != 1) {
         </form>
 </div>
 
-<div class="col-md-3"></div>
+<div class="col-md-4"></div>
 </div>
 <script type="text/javascript" src="../Js/registro.js"></script>
 <?php

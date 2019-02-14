@@ -41,8 +41,8 @@ if (isset($_POST['btnConsulta'])) {
             if ($consulta[8] != "") {
     	  echo "
             <div class=\"row\">
-				<div class=\"col-md-3\"></div>
-				<div class=\"col-md-6\">
+				<div class=\"col-md-4\"></div>
+				<div class=\"col-md-4\">
 					<form method=\"POST\" action=\"consulta.php\">
 						<div class=\"form-group\">
 							<label for=\"codigo\">Codigo</label>
@@ -68,8 +68,8 @@ if (isset($_POST['btnConsulta'])) {
 					
 						<div class=\"form-group form-inline\" >
 							<label for=\"calle\">Direcciòn</label><br>
-							<input type=\"text\" name=\"calle\" value='$consulta[6]' readonly=\"readonly\" class=\"form-control form-inline\" id=\"calle\" size=\"40\">
-							<input type=\"text\" name=\"numero\" value='$consulta[7]' readonly=\"readonly\" class=\"form-control form-inline\" id=\"numero\" size=\"25\">
+							<input type=\"text\" name=\"calle\" value='$consulta[6]' readonly=\"readonly\" class=\"form-control form-inline\" id=\"calle\" size=\"28\">
+							<input type=\"text\" name=\"numero\" value='$consulta[7]' readonly=\"readonly\" class=\"form-control form-inline\" id=\"numero\" size=\"8\">
 						</div>
 						<div class=\"form-group\">
 							<label for=\"referencia\">Nombre referencia</label>
@@ -114,8 +114,8 @@ if (isset($_POST['btnConsulta'])) {
 				
     	 echo"
 		<div class=\"row\">
-			<div class=\"col-md-3\"></div>
-			<div class=\"col-md-6\">
+			<div class=\"col-md-4\"></div>
+			<div class=\"col-md-4\">
 					<form method=\"POST\" action=\"consulta.php\">
 						<div class=\"form-group\">
 							<label for=\"codigo\">Codigo</label>
@@ -143,8 +143,8 @@ if (isset($_POST['btnConsulta'])) {
 						</div>
 						<div class=\"form-group form-inline\" >
 							<label for=\"calle\">Direcciòn</label><br>
-							<input type=\"text\" name=\"calle\" value='$consulta[6]' readonly=\"readonly\" class=\"form-control form-inline\" id=\"calle\" size=\"40\">
-							<input type=\"text\" name=\"numero\" value='$consulta[7]' readonly=\"readonly\" class=\"form-control form-inline\" id=\"numero\" size=\"25\">
+							<input type=\"text\" name=\"calle\" value='$consulta[6]' readonly=\"readonly\" class=\"form-control form-inline\" id=\"calle\" size=\"28\">
+							<input type=\"text\" name=\"numero\" value='$consulta[7]' readonly=\"readonly\" class=\"form-control form-inline\" id=\"numero\" size=\"8\">
 						</div>
 						<div class=\"form-group\">
 							<label for=\"motivo\">Motivo de visita</label>
