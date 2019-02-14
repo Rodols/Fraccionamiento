@@ -8,12 +8,13 @@
 }
 td
 /* Todas las celdas de la tabla... */
-
     {
     border: 1px solid #11B1F7;
     
+    
     /* tendrá un borde de 1 px */
 }
+
 
 body {
     background-image: url("../Imagenes/skulls.png");
