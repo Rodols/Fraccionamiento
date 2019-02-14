@@ -1,10 +1,20 @@
-td, th, table
+ th
 /* Todas las celdas de la tabla... */
 
     {
-    border: 2px solid black;
+    border-radius: 11px  ;
+    /* tendrá un borde de 1 px */
+    color: white;
+}
+td
+/* Todas las celdas de la tabla... */
+
+    {
+    border: 1px solid #11B1F7;
+    
     /* tendrá un borde de 1 px */
 }
+
 body {
     background-image: url("../Imagenes/skulls.png");
     color: #2b2b2b !important;

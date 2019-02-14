@@ -56,32 +56,32 @@ if (isset($_POST['btnFiltro'])) {
                 "
 				 <br><table class=\"table\" >
 						<tr bgcolor=\"#11B1F7\">
-						<th><b><center>Visitante</center></b></th>
-						<th><b><center>Usuario</center></b></th>
-						<th><b><center>Fecha de registro</center></b></th>
-						<th><b><center>Nombre</center></b></th>
-						<th><b><center>Visita a</center></b></th>
-						<th><b><center>Dirección que visita</center></b></th>
-						<th><b><center>Placas</center></b></th>
-						<th><b><center>MotivoVisita</center></b></th>
-						<th><b><center>Observaciones</center></b></th>
-						<th><b><center>CapturaRostro</center></b></th>
-						<th><b><center>CapturaCredencial</center></b></th>
-						<th><b><center>CapturaVehiculo</center></b></th>
+								<th><b><center>Visitante</center></b></th>
+								<th><b><center>Usuario</center></b></th>
+								<th><b><center>Fecha de registro</center></b></th>
+								<th><b><center>Nombre</center></b></th>
+								<th><b><center>Visita a</center></b></th>
+								<th><b><center>Dirección que visita</center></b></th>
+								<th><b><center>Placas</center></b></th>
+								<th><b><center>MotivoVisita</center></b></th>
+								<th><b><center>Observaciones</center></b></th>
+								<th><b><center>CapturaRostro</center></b></th>
+								<th><b><center>CapturaCredencial</center></b></th>
+								<th><b><center>CapturaVehiculo</center></b></th>
 						</tr>
 						<tr align=\"center\">
-						<td width=\"100\" nowrap>" . $consulta['visitante'] .'<br/>'.'<span class="titulo">'.$consulta['codigo'].' </span>'. "</td>
-						<td width=\"90\" nowrap>" . $consulta['usuario'] . "</td>
-						<td width=\"140\" nowrap>" . $consulta['fecha'].'<br/>'.'<span class="titulo">Entrada: </span>'.$consulta['entrada'] .'<br/>'.'<span class="titulo">Salida: </span>'.$consulta['salida'] . "</td>
-						<td width=\"170\" nowrap>" . $consulta['nombre'] . "</td>
-						<td width=\"170\" nowrap>" . $consulta['nombre_ref'] . "</td>
-						<td width=\"170\" nowrap>" . $consulta['calle'] .' #'. $consulta['numero'] ."</td>
-						<td width=\"100\" nowrap>" . $consulta['placas'] . "</td>
-						<td width=\"230\" nowrap>" . $consulta['motivo_visita'] . "</td>
-						<td width=\"230\" nowrap>" . $consulta['observaciones'] . "</td>
-						<td width=\"200\" nowrap><img src='$consulta[imagen_rostro]'  width=\"200\" heigth=\"300\" name=\"foto_r\" /></td>
-						<td width=\"200\" nowrap><img src='$consulta[imagen_credencial]'  width=\"200\" heigth=\"300\" name=\"foto_c\" /></td>
-						<td width=\"200\" nowrap><img src='$consulta[imagen_coche]'  width=\"200\" heigth=\"300\" name=\"foto_v\" /></td>
+								<td width=\"85\" nowrap>" . $consulta['visitante'] .'<br/>'.'<span class="titulo">'.$consulta['codigo'].' </span>'. "</td>
+								<td width=\"90\" nowrap>" . $consulta['usuario'] . "</td>
+								<td width=\"140\" nowrap>" . $consulta['fecha'].'<br/>'.'<span class="titulo">Entrada: </span>'.$consulta['entrada'] .'<br/>'.'<span class="titulo">Salida: </span>'.$consulta['salida'] . "</td>
+								<td width=\"170\" nowrap>" . $consulta['nombre'] . "</td>
+								<td width=\"170\" nowrap>" . $consulta['nombre_ref'] . "</td>
+								<td width=\"170\" nowrap>" . $consulta['calle'] .' #'. $consulta['numero'] ."</td>
+								<td width=\"100\" nowrap>" . $consulta['placas'] . "</td>
+								<td width=\"200\" nowrap>" . $consulta['motivo_visita'] . "</td>
+								<td width=\"230\" nowrap>" . $consulta['observaciones'] . "</td>
+								<td width=\"200\" nowrap><img src='$consulta[imagen_rostro]'  width=\"200\" heigth=\"300\" name=\"foto_r\" /></td>
+								<td width=\"200\" nowrap><img src='$consulta[imagen_credencial]'  width=\"200\" heigth=\"300\" name=\"foto_c\" /></td>
+								<td width=\"200\" nowrap><img src='$consulta[imagen_coche]'  width=\"200\" heigth=\"300\" name=\"foto_v\" /></td>
 				    	</tr>
 					</table>
 				";
@@ -92,7 +92,7 @@ if (isset($_POST['btnFiltro'])) {
 						<th><b><center>Visitante</center></b></th>
 						<th><b><center>Usuario</center></b></th>
 						<th><b><center>Fecha de registro</center></b></th>
-						<th><b><center>Nombre</center></b></th>
+						<th><b><center>Nombre</center></b></th>		
 						<th><b><center>Visita a</center></b></th>
 						<th><b><center>Dirección que visita</center></b></th>
 						<th><b><center>MotivoVisita</center></b></th>
@@ -101,13 +101,13 @@ if (isset($_POST['btnFiltro'])) {
 						<th><b><center>CapturaCredencial</center></b></th>
 						</tr>
 						<tr align=\"center\">
-						<td width=\"100\" nowrap>" . $consulta['visitante'] . '<br/>'.'<span class="titulo">'.$consulta['codigo'].' </span>'."</td>
+						<td width=\"85\" nowrap>" . $consulta['visitante'] . '<br/>'.'<span class="titulo">'.$consulta['codigo'].' </span>'."</td>
 						<td width=\"90\" nowrap>" . $consulta['usuario'] . "</td>
 						<td width=\"140\" nowrap>" . $consulta['fecha'] .'<br/>'.'Entrada: '.$consulta['entrada'] .'<br/>'.'Salida: '.$consulta['salida'] . "</td>
 						<td width=\"170\" nowrap>" . $consulta['nombre'] . "</td>
 						<td width=\"170\" nowrap>" . $consulta['nombre_ref'] . "</td>
 						<td width=\"170\" nowrap>" . $consulta['calle'] .' #'. $consulta['numero'] ."</td>
-						<td width=\"230\" nowrap>" . $consulta['motivo_visita'] . "</td>
+						<td width=\"200\" nowrap>" . $consulta['motivo_visita'] . "</td>
 						<td width=\"230\" nowrap>" . $consulta['observaciones'] . "</td>
 						<td width=\"200\" nowrap><img src='$consulta[imagen_rostro]'  width=\"200\" heigth=\"300\" name=\"foto_r\" /></td>
 						<td width=\"200\" nowrap><img src='$consulta[imagen_credencial]'  width=\"200\" heigth=\"300\" name=\"foto_c\" /></td>
