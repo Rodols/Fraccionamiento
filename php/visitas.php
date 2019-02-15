@@ -58,18 +58,18 @@ if (isset($_POST['btnFiltro'])) {
 	}
 	if($resultados){
 		echo "
-		<br><table class=\"table table-bordered table-striped table-hover\">
+		<br><table class=\"table table-bordered table-striped table-sm table-hover\">
 				<thead class=\"thead-dark\">
-					<tr bgcolor=\"#11B1F7\">
-						<th><b><center>Gafete</center></b></th>
-						<th><b><center>Usuario</center></b></th>
-						<th><b><center>Entrada</center></b></th>
-						<th><b><center>Nombre</center></b></th>
-						<th><b><center>Visita a</center></b></th>
-						<th><b><center>Placas</center></b></th>
-						<th><b><center>MotivoVisita</center></b></th>
-						<th><b><center>Observaciones</center></b></th>
-						<th><b><center>Imagenes</center></b></th>
+					<tr>
+						<th width=\"85\"><b><center>Gafete</center></b></th>
+						<th width=\"90\"><b><center>Usuario</center></b></th>
+						<th width=\"110\"><b><center>Entrada</center></b></th>
+						<th width=\"160\"><b><center>Nombre</center></b></th>
+						<th width=\"160\"><b><center>Visita a</center></b></th>
+						<th width=\"100\"><b><center>Placas</center></b></th>
+						<th width=\"220\"><b><center>MotivoVisita</center></b></th>
+						<th width=\"220\"><b><center>Observaciones</center></b></th>
+						<th width=\"120\"><b><center>Imagenes</center></b></th>
 					</tr>
 				</thead>
 				<tbody>

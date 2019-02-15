@@ -16,6 +16,27 @@ td
     background-color: #FF5722 ;
   }
 
+ 
+  tr {
+    width: 98%;
+    display: inline-table;
+    table-layout: fixed;
+    }
+    
+    table{
+             
+     display: -moz-groupbox;   
+    }
+    tbody{
+      overflow-y: scroll;      
+      height: 370px;            
+      width: 99%;
+      position: absolute;
+    }
+  
+  
+    
+
 body {
     background-image: url("../Imagenes/skulls.png");
     color:black !important;

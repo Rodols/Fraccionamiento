@@ -32,7 +32,7 @@ include_once '../plantillas/BarraNavegacion.inc.php';
 		</center>
 	</div>
 	
-	<div class="container-fluid">
+	<div class="container-fluid ">
 		
 <?php
 if (isset($_POST['btnFiltro'])) {
@@ -49,21 +49,21 @@ if (isset($_POST['btnFiltro'])) {
 
 	if($resultados){
 		echo "
-		<br><table class=\"table table-bordered table-striped table-hover\">
+		<br><table class=\"table table-bordered table-striped table-sm table-hover\">
 				 	<thead class=\"thead-dark\">
 						<tr>
-								<th><b><center>Visitante</center></b></th>
-								<th><b><center>Usuario</center></b></th>
-								<th><b><center>Fecha de registro</center></b></th>
-								<th><b><center>Nombre</center></b></th>
-								<th><b><center>Visita a</center></b></th>
-								<th><b><center>Placas</center></b></th>
-								<th><b><center>MotivoVisita</center></b></th>
-								<th><b><center>Observaciones</center></b></th>
-								<th><b><center>Imagenes</center></b></th>
+								<th width=\"85\"><b><center>Visitante</center></b></th>
+								<th width=\"80\"><b><center>Usuario</center></b></th>
+								<th width=\"150\"><b><center>Fecha de registro</center></b></th>
+								<th width=\"160\"><b><center>Nombre</center></b></th>
+								<th width=\"200\"><b><center>Visita a</center></b></th>
+								<th \"100\"><b><center>Placas</center></b></th>
+								<th width=\"200\"><b><center>MotivoVisita</center></b></th>
+								<th width=\"200\"><b><center>Observaciones</center></b></th>
+								<th width=\"130\"><b><center>Imagenes</center></b></th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody >
 					";
 	}
 	
@@ -72,7 +72,7 @@ if (isset($_POST['btnFiltro'])) {
 
             echo
                 "
-				<tr align=\"center\">
+				<tr align=\"center\" >
 								<td width=\"85\" nowrap>" . $consulta['visitante'] .'<br/>'.'<span class="titulo">'.$consulta['codigo'].' </span>'. "</td>
 								<td width=\"80\" nowrap>" . $consulta['usuario'] . "</td>
 								<td width=\"150\" nowrap>" . $consulta['fecha'].'<br/>'.'<span class="titulo">Entrada: </span>'.$consulta['entrada'] .'<br/>'.'<span class="titulo">Salida: </span>'.$consulta['salida'] . "</td>
