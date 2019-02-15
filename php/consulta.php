@@ -10,8 +10,8 @@ if ($_SESSION['session_exito'] != 1) {
 }
 ?>
 <center>
-			<h2>Registro de Salida.</h2>
-			<h4><b>Xalapa Ver, <?=$fechaActual;?></b></h4><br>
+			<h4><br>Registro de Salida</h4>
+			<h5>Xalapa Ver, <?=$fechaActual;?></h5><br>
 		</center>
 <div class="row">
 		<div class="col-md-5"></div>
