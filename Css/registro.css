@@ -2,20 +2,19 @@
 /* Todas las celdas de la tabla... */
 
     {
-    border-radius: 18px  ;
-    /* tendrá un borde de 1 px */
-    color: white;
+     color: white;
     font-size: 14px;
-}
+   }
 td
 /* Todas las celdas de la tabla... */
-    {
-    border: 1px solid #11B1F7;
-    
+    {  
     /* tendrá un borde de 1 px */
     font-size: 14px;
 }
-
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th 
+{
+    background-color: #FF5722 ;
+  }
 
 body {
     background-image: url("../Imagenes/skulls.png");
@@ -24,13 +23,21 @@ body {
 }
 
 h1, h2, h3, h4,h5 {
-    color: #DF0101 !important;
+    color: #FF5722 !important;
     font-weight: bold ;
 }
 
 .titulo {
 color:blue;
 
+}
+.thead-dark{
+    /* redondeo esquinas de barra de navegacion */
+    border-radius: 5px !important; 
+}
+.navbar {
+    /* redondeo esquinas de barra de navegacion */
+    border-radius: 5px;
 }
 
 .navbar-r:link {

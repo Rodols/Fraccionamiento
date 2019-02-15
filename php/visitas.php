@@ -8,36 +8,30 @@ if ($_SESSION['session_exito'] != 1) {
 include_once '../plantillas/InicioDocumento.inc.php';
 include_once '../plantillas/BarraNavegacion.inc.php';
 ?>
-<center>
-			<h2>Visitas dentro del fraccionamiento</h2>
-			<h4><b>Xalapa Ver, <?=$fechaActual;?></b></h4><br>
+	<div class="container-fluid">
+		<center>
+			<h4><br>Visitas dentro del fraccionamiento (Xalapa Ver, <?=$fechaActual;?>)</h4><br>
 			<form class="form-inline" method="POST" action="visitas.php">
-  <div class="form-group">
-    <input type="text" class="form-control" name="buscarVisitas" id="buscarVisitas" placeholder="Buscar">
-  </div>
-  <div class="form-group">
-    	    <select id="selectBusqueda" name="selectBusqueda">
-                <option value="todos" >MostrarTodos</option>
-                <option value="usuario" >BuscarEnUsuario</option>
-                 <option value="fecha" >BuscarEnFecha</option>
-                <option value="nombre" >BuscarEnNombreVisitante</option>
-                <option value="calle" >BuscarEnCalle</option>
-                <option value="placas" >Placas</option>
-            </select>
-  </div>
-   <button type="submit" name="btnFiltro" class="btn btn-info">Buscar</button>
-</form>
+  				<div class="form-group">
+   					 <input type="text" class="form-control" name="buscarVisitas" id="buscarVisitas" placeholder="Buscar">
+ 			 	</div>
+  				<div class="form-group">
+    	    		<select id="selectBusqueda" class="form-control" name="selectBusqueda">
+                		<option value="todos" >MostrarTodos</option>
+                		<option value="usuario" >BuscarEnUsuario</option>
+                 		<option value="fecha" >BuscarEnFecha</option>
+                		<option value="nombre" >BuscarEnNombreVisitante</option>
+                		<option value="calle" >BuscarEnCalle</option>
+                		<option value="placas" >Placas</option>
+           		 	</select>
+				  </div>
+				  <div class="form-group">
+					 <button type="submit" name="btnFiltro" class="btn btn-info form-control">Buscar</button>
+				 </div>
+			</form>
 		</center>
- <div class="row">
-	<div class="col-md-4">
-				</div>
-	<div class="col-md-4">
-
-
-</div>
-
-<div class="col-md-4"></div>
-</div>
+	</div>
+	<div class="container-fluid">
 <?php
 if (isset($_POST['btnFiltro'])) {
 	/* ESto es para abriri y cerrar la pesataña del arduino wifi
@@ -81,15 +75,15 @@ if (isset($_POST['btnFiltro'])) {
 							<tr align=\"center\">
 								<td width=\"85\" nowrap>". '<span class="titulo">'. $consulta['codigo'] .'</span>'. "</td>
 								<td width=\"90\" nowrap>" . $consulta['usuario'] . "</td>
-								<td width=\"100\" nowrap>" . $consulta['fecha'] .'<br/>'.'<span class="titulo">'. $consulta['entrada'] .'</span>'."</td>
-								<td width=\"170\" nowrap>". $consulta['nombre'] ."</td>
-								<td width=\"170\" nowrap>".$consulta['nombre_ref'].'<br/> '.'<span class="titulo">' . $consulta['calle'] .' #'. $consulta['numero'].'</span>'."</td>
+								<td width=\"110\" nowrap>" . $consulta['fecha'] .'<br/>'.'<span class="titulo">'. $consulta['entrada'] .'</span>'."</td>
+								<td width=\"160\" nowrap>". $consulta['nombre'] ."</td>
+								<td width=\"160\" nowrap>".$consulta['nombre_ref'].'<br/> '.'<span class="titulo">' . $consulta['calle'] .' #'. $consulta['numero'].'</span>'."</td>
 								<td width=\"100\" nowrap>" . $consulta['placas'] . "</td>
-								<td width=\"225\" nowrap>" . $consulta['motivo_visita'] . "</td>
-								<td width=\"240\" nowrap>" . $consulta['observaciones'] . "</td>
-								<td width=\"150\" nowrap><a href='$consulta[imagen_rostro]'  name=\"foto_r\" />ImagenRostro</a><br/>
-								  <a href='$consulta[imagen_credencial]'  name=\"foto_c\" />ImagenCredencial</a><br/>
-								  <a href='$consulta[imagen_coche]'  name=\"foto_v\" />ImagenCoche</a></td>
+								<td width=\"220\" nowrap>" . $consulta['motivo_visita'] . "</td>
+								<td width=\"220\" nowrap>" . $consulta['observaciones'] . "</td>
+								<td width=\"120\" nowrap><a href='$consulta[imagen_rostro]'  name=\"foto_r\" />ImgRostro</a><br/>
+								  <a href='$consulta[imagen_credencial]'  name=\"foto_c\" />ImgCredencial</a><br/>
+								  <a href='$consulta[imagen_coche]'  name=\"foto_v\" />ImgCoche</a></td>
 				    		</tr>
 					</table>
 				";
@@ -111,14 +105,14 @@ if (isset($_POST['btnFiltro'])) {
 						<tr align=\"center\">
 							<td width=\"85\" nowrap>" . '<span class="titulo">'. $consulta['codigo'] .'</span>'. "</td>
 							<td width=\"90\" nowrap>" . $consulta['usuario'] . "</td>
-							<td width=\"100\" nowrap>" . $consulta['fecha'] .'<br/>'.'<span class="titulo">'. $consulta['entrada'] .'</span>'."</td>
-							<td width=\"170\" nowrap>" . $consulta['nombre'] . "</td>
-							<td width=\"170\" nowrap>".$consulta['nombre_ref'].'<br/>'.'<span class="titulo">' . $consulta['calle'] .' #'. $consulta['numero'] .'.</span>'."</td>
+							<td width=\"110\" nowrap>" . $consulta['fecha'] .'<br/>'.'<span class="titulo">'. $consulta['entrada'] .'</span>'."</td>
+							<td width=\"160\" nowrap>" . $consulta['nombre'] . "</td>
+							<td width=\"160\" nowrap>".$consulta['nombre_ref'].'<br/>'.'<span class="titulo">' . $consulta['calle'] .' #'. $consulta['numero'] .'.</span>'."</td>
 							<td width=\"100\" nowrap>" . 'Sin vehiculo'. "</td>
-							<td width=\"225\" nowrap>" . $consulta['motivo_visita'] . "</td>
-							<td width=\"240\" nowrap>" . $consulta['observaciones'] . "</td>
-							<td width=\"150\" nowrap><a href='$consulta[imagen_rostro]' name=\"foto_r\" />ImagenRostro</a><br/>
-							  <a href='$consulta[imagen_credencial]' name=\"foto_c\" />ImagenCredencial</a></td>
+							<td width=\"220\" nowrap>" . $consulta['motivo_visita'] . "</td>
+							<td width=\"220\" nowrap>" . $consulta['observaciones'] . "</td>
+							<td width=\"150\" nowrap><a href='$consulta[imagen_rostro]' name=\"foto_r\" />ImgRostro</a><br/>
+							  <a href='$consulta[imagen_credencial]' name=\"foto_c\" />ImgCredencial</a></td>
 				    	</tr>
 					</table>
     	";
