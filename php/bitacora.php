@@ -8,36 +8,36 @@ if ($_SESSION['session_exito'] != 1) {
 include_once '../plantillas/InicioDocumento.inc.php';
 include_once '../plantillas/BarraNavegacion.inc.php';
 ?>
-<center>
-			<h2>Historial de visitas</h2>
-			<h4><b>Xalapa Ver, <?=$fechaActual;?></b></h4><br>
-			<form class="form-inline" method="POST" action="bitacora.php">
-  <div class="form-group">
-    <input type="text" class="form-control" name="busqueda" id="busqueda" placeholder="Buscar">
-  </div>
-  <div class="form-group">
-    	    <select id="selectBitacora" name="selectBitacora">
-                <option value="todos" >MostrarTodos</option>
-                <option value="usuario" >BuscarEnUsuario</option>
-                 <option value="fecha" >BuscarEnFecha</option>
-                <option value="nombre" >BuscarEnNombreVisitante</option>
-                <option value="calle" >BuscarEnCalle</option>
-                <option value="placas" >Placas</option>
-            </select>
-  </div>
-   <button type="submit" name="btnFiltro" class="btn btn-info">Buscar</button>
-</form>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<center>
+			<div class="container-fluid">
+				<h2><br>Historial de visitas</h2>
+				<h4>Xalapa Ver, <?=$fechaActual;?></h4><br>
+				<form class="form-inline text-center"  method="POST" action="bitacora.php">
+  					<div class="form-group mb-2">
+    					<input type="text" class="form-control" name="busqueda" id="busqueda" class="form-control" placeholder="Buscar">
+ 		 			</div>
+  					<div class="form-group mx-sm-3 mb-2">
+    	   				 <select class="form-control" id="selectBitacora" name="selectBitacora">
+                			<option value="todos" >MostrarTodos</option>
+                			<option value="usuario" >BuscarEnUsuario</option>
+                 			<option value="fecha" >BuscarEnFecha</option>
+                			<option value="nombre" >BuscarEnNombreVisitante</option>
+                			<option value="calle" >BuscarEnCalle</option>
+                			<option value="placas" >Placas</option>
+            			</select>
+				    </div>
+				    <div class="form-group mb-2">
+						<button type="submit" name="btnFiltro" class="btn btn-info form-control">Buscar</button>
+				    </div>
+				</form><br/>
+			</div>
+		</div>
 		</center>
- <div class="row">
-	<div class="col-md-4">
-				</div>
-	<div class="col-md-4">
-
-
-</div>
-
-<div class="col-md-4"></div>
-</div>
+		<div class="col-md-3"></div>
+		<div class="container-fluid">
 <?php
 if (isset($_POST['btnFiltro'])) {
     $buscar_text = $_POST['busqueda'];
@@ -114,7 +114,7 @@ if (isset($_POST['btnFiltro'])) {
     include_once "cerrar_conexion.php";
 }
 
-?>
+?></div>
 <?php
 include_once '../plantillas/FinDocumento.inc.php';
 ?>
