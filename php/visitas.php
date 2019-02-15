@@ -12,10 +12,10 @@ include_once '../plantillas/BarraNavegacion.inc.php';
 		<center>
 			<h4><br>Visitas dentro del fraccionamiento (Xalapa Ver, <?=$fechaActual;?>)</h4><br>
 			<form class="form-inline" method="POST" action="visitas.php">
-  				<div class="form-group">
+  				<div class="form-group mb-2">
    					 <input type="text" class="form-control" name="buscarVisitas" id="buscarVisitas" placeholder="Buscar">
  			 	</div>
-  				<div class="form-group">
+  				<div class="form-group mx-sm-3 mb-2">
     	    		<select id="selectBusqueda" class="form-control" name="selectBusqueda">
                 		<option value="todos" >MostrarTodos</option>
                 		<option value="usuario" >BuscarEnUsuario</option>
@@ -25,7 +25,7 @@ include_once '../plantillas/BarraNavegacion.inc.php';
                 		<option value="placas" >Placas</option>
            		 	</select>
 				  </div>
-				  <div class="form-group">
+				  <div class="form-group mb-2">
 					 <button type="submit" name="btnFiltro" class="btn btn-info form-control">Buscar</button>
 				 </div>
 			</form>
