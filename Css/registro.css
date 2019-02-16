@@ -43,7 +43,17 @@ body {
     font-weight: bold;
 }
 
-h1, h2, h3, h4,h5 {
+h3 {
+    color: white;
+ padding-right: 15px;
+    font-weight: bold ;
+}
+
+.nav-item{
+    padding-right: 10px;
+}
+
+h1, h2,h4,h5 {
     color: #FF5722 !important;
     font-weight: bold ;
 }
@@ -61,18 +71,9 @@ color:blue;
     border-radius: 5px;
 }
 
-.navbar-r:link {
-    color: #FF5722 !important;
-}
-.navbar-r:visited {
+.navbar-r:link, .navbar-r:visited {
     color: white !important;
 }
 .navbar-r:hover, .navbar-r:active {
-    color: #FF5722 !important;
-}
-.navbar-brand:link, .navbar-brand:visited {
-    color: #FF5722 !important;
-}
-.navbar-brand:hover, .navbar-brand:active {
     color: #FF5722 !important;
 }
