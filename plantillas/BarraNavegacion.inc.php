@@ -10,13 +10,13 @@ $tipo = $_SESSION['tipo'];
 				<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     				<h3>RealDelBosque </h3>
     			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-					<li class="nav-item "><a  href="registro_user.php" class=" btn btn-outline-success">
+					<li class="nav-item " ><a  href="registro_user.php" class=" btn btn-outline-success">
 						<i class="material-icons">&#xe55a;</i> <span> <?=$user?></span></a>
 					</li>   
-					<li class="nav-item "><a  href="registro.php"  class="nav-link navbar-r btn btn-outline">
+					<li class="nav-item " ><a id="EntradaMenu" href="registro.php"  class=" btn btn-outline navbar-r ">
 						 <i class="material-icons">&#xe85d;</i> <span> RegistroDeEntrada</span></a>
       				 </li>
-      				<li class="nav-item "><a class="nav-link navbar-r  btn btn-outline " href="consulta.php">
+      				<li class="nav-item "><a id="SalidaMenu" class="nav-link navbar-r  btn btn-outline " href="consulta.php">
 						  <i class="material-icons">&#xe862;</i><span>RegistroDeSalida</span></a>
      				 </li>
 					<li class="nav-item "><a  href="visitas.php" class="nav-link navbar-r  btn btn-outline">
