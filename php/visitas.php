@@ -6,11 +6,13 @@ if ($_SESSION['session_exito'] != 1) {
     header('Location:../index.php');
 }
 include_once '../plantillas/InicioDocumento.inc.php';
-include_once '../plantillas/BarraNavegacion.inc.php';
 ?>
+<body onload="VistaVisitantes();">
+<?php include_once '../plantillas/BarraNavegacion.inc.php';?>
+
 	<div class="container-fluid">
 		<center>
-			<h4><br>Visitas dentro del fraccionamiento (Xalapa Ver, <?=$fechaActual;?>)</h4><br>
+			<h4 id="tabV"><br>Visitas dentro del fraccionamiento (Xalapa Ver, <?=$fechaActual;?>)</h4><br>
 			<form class="form-inline" method="POST" action="visitas.php">
   				<div class="form-group mb-2">
    					 <input type="text" class="form-control" name="buscarVisitas" id="buscarVisitas" placeholder="Buscar">

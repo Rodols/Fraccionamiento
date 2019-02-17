@@ -6,7 +6,9 @@ if ($_SESSION['session_exito'] != 1) {
     header('Location:../index.php');
 } else {
     include_once '../plantillas/InicioDocumento.inc.php';
-    include_once '../plantillas/BarraNavegacion.inc.php';
+    ?>
+    <body onload="VistaEntrada();">
+<?php include_once '../plantillas/BarraNavegacion.inc.php';
 }
 ?>
         <center>

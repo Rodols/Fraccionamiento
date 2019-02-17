@@ -6,12 +6,14 @@ if ($_SESSION['session_exito'] != 1) {
     header('Location:../index.php');
 }
 include_once '../plantillas/InicioDocumento.inc.php';
-include_once '../plantillas/BarraNavegacion.inc.php';
 ?>
+<body onload="VistaBitacora();">
+<?php include_once '../plantillas/BarraNavegacion.inc.php';?>
+
 <div role="tabpanel" class="tab-pane" id="test_1">
 	<div class="container-fluid">
 		<center>
-			<h4><br>Historial de visitas (Xalapa Ver, <?=$fechaActual;?>)</h4><br>
+			<h4 id="tabB"><br>Historial de visitas (Xalapa Ver, <?=$fechaActual;?>)</h4><br>
 				<form class="form-inline text-center"  method="POST" action="bitacora.php">
   					<div class="form-group mb-2">
     					<input type="text" class="form-control" name="busqueda" id="busqueda"  placeholder="Buscar">

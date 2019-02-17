@@ -5,8 +5,10 @@ if ($_SESSION['session_exito'] != 1) {
     //require 'index.php';
     header('Location:../index.php');
 } else {
-    include_once '../plantillas/InicioDocumento.inc.php';
-    include_once '../plantillas/BarraNavegacion.inc.php';
+	include_once '../plantillas/InicioDocumento.inc.php';
+	?>
+	<body onload="VistaSalida();">
+   <?php include_once '../plantillas/BarraNavegacion.inc.php';
 }
 ?>
 <center>

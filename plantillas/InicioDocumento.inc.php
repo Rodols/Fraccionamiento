@@ -29,4 +29,3 @@ $fechaActual = strftime("%Y-%m-%d", time());
 
 
 </head>
-<body>
