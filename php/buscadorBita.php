@@ -1,14 +1,12 @@
 <?php
 $buscarText=$_POST['busqueda'];
 if(isset($buscarText)){
-    $columna     = $_POST['selectBitacora'];
-
     include_once "abrir_conexion.php";
 
-    if (($columna == "todos") && ($buscarText == "")) {
+    if (($buscarText == "")) {
         $resultados = mysqli_query($conexion, "SELECT * FROM $tabla_db3 ORDER By visitante DESC");
     }
-    if (($columna == "todos") && ($buscarText != "")) {
+    if ($buscarText != "") {
         $resultados = mysqli_query($conexion, "SELECT * FROM $tabla_db3  WHERE  
             $tabla_db3.usuario LIKE '%". $buscarText ."%' OR
             $tabla_db3.nombre LIKE '%". $buscarText ."%' OR
