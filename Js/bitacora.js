@@ -1,24 +1,31 @@
-$(buscar_datos());
+$(function() {
+    $('#formBuscar').on("submit",function(e) {
+      e.preventDefault(); // cancela el evento por defecto del formulario
+      var parametros = $(this).serialize();
+      $.ajax({
+        url: "buscadorBita.php",
+        type: "POST",
+        data: parametros,
+        success: function(response){
+           $("#visitantesTabla").html(response);
+        }
 
-function buscar_datos(consulta) {
-    $.ajax({
-        url: '../php/bitacora_buscador.php',
-        type: 'POST',
-        dataType: 'html',
-        data: {
-            consulta: consulta
-        },
-    }).done(function(respuesta) {
-        $("#datos").html(respuesta);
-    }).fail(function() {
-        console.log("error");
-    })
-}
-$(document).on('keyup', '#caja_busqueda', function() {
-    var valor = $(this).val();
-    if (valor != "") {
-        buscar_datos(valor);
-    } else {
-        buscar_datos();
-    }
-});
+      })
+  
+    });
+
+    $('#busqueda').on("keyup",function(e){
+      var busqueda= $("#busqueda").val();
+      var selectBitacora = $("#selectBitacora").val();
+        $.ajax({
+        url: "buscadorBita.php",
+        type: "POST",
+        data: {busqueda,selectBitacora},
+        success: function(response){
+          $("#visitantesTabla").html(response);
+        }
+    });
+  
+    });
+
+  });

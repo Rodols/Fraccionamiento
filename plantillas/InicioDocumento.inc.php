@@ -14,6 +14,7 @@ $fechaActual = strftime("%Y-%m-%d", time());
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" type="text/css" href="../Css/bootstrap.min.css" media="screen" />
         <link rel="stylesheet" type="text/css" href="../Css/registro.css" media="screen" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
      <script>
     function showContent() {
         element = document.getElementById("content");
