@@ -12,9 +12,8 @@ if ($_SESSION['session_exito'] != 1) {
 }
 ?>
         <center>
-            <h4 id="tabE"><br>Registro de Entrada</h4>
-            <h5>Xalapa Ver, <?=$fechaActual;?></h5><br>
-        </center>
+            <h4 id="tabE"><br>Registro de entrada (Xalapa Ver, <?=$fechaActual;?>)</h4><br>
+                </center>
  <div class="row">
     <div class="col-md-4">
         </div>

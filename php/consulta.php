@@ -11,9 +11,8 @@ if ($_SESSION['session_exito'] != 1) {
    <?php include_once '../plantillas/BarraNavegacion.inc.php';
 }
 ?>
-<center>
-			<h4 id="tabS" ><br>Registro de Salida</h4>
-			<h5>Xalapa Ver, <?=$fechaActual;?></h5><br>
+		<center>
+			<h4 id="tabS" ><br>Registro de salida (Xalapa Ver, <?=$fechaActual;?>)</h4><br>
 		</center>
 <div class="row">
 		<div class="col-md-5"></div>

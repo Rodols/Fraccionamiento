@@ -10,48 +10,48 @@ var Visitantes = document.getElementById("VisitantesMenu");
 var Bitacora = document.getElementById("BitacoraMenu");
 
 var busqueda ="";
-var numero=0;
-
-
+var tituloE ="";
+var tituloS="";
+var tituloV ="";
+var tituloB ="";
  
 function VistaEntrada(){ 
-
-    var tituloE = TabEntrada.textContent;
-    busqueda =tituloE.indexOf("Registro de Entrada");
-     if(busqueda==0){
-      RegistroEntrada.style.backgroundColor = "blue";
-     }else{
-    RegistroEntrada.style.backgroundColor = "transparent";
-     }
-     }
+     tituloE = TabEntrada.textContent;
+    busqueda =tituloE.indexOf("Registro de entrada");
+        if(busqueda==0){
+             RegistroEntrada.style.backgroundColor = "blue";
+        }   else{
+                RegistroEntrada.style.backgroundColor = "transparent";
+             }
+}
 
      
 function VistaSalida(){ 
-   var tituloS = TabSalida.textContent;
-    busqueda =tituloS.indexOf("Registro de Salida");
+   tituloS = TabSalida.textContent;
+    busqueda =tituloS.indexOf("Registro de salida");
       if(busqueda==0){
-       RegistroSalida.style.backgroundColor = "blue";
-     }else{
-    RegistroSalida.style.backgroundColor = "transparent";
-     }
-     }
+         RegistroSalida.style.backgroundColor = "blue";
+         }else{
+             RegistroSalida.style.backgroundColor = "transparent";
+        }
+ }
 
      function VistaVisitantes(){ 
-        var tituloV = TabVisitantes.textContent;
-        var busqueda =tituloV.indexOf("Visitas dentro del fraccionamiento");
-          if(busqueda==0){
-           Visitantes.style.backgroundColor = "blue";
-          }else{
-         Visitantes.style.backgroundColor = "transparent";
-          }
-          }
+         tituloV = TabVisitantes.textContent;
+        busqueda =tituloV.indexOf("Visitas dentro del fraccionamiento");
+            if(busqueda==0){
+                 Visitantes.style.backgroundColor = "blue";
+                 }else{
+                    Visitantes.style.backgroundColor = "transparent";
+             }
+     }
 
           function VistaBitacora(){ 
-            var tituloB = TabBitacora.textContent;
+            tituloB = TabBitacora.textContent;
              busqueda =tituloB.indexOf("Historial de visitas");
                 if(busqueda==0){
-                Bitacora.style.backgroundColor = "blue";
-              }else{
-             Bitacora.style.backgroundColor = "transparent";
-              }
-              }
+                    Bitacora.style.backgroundColor = "blue";
+                }else{
+                 Bitacora.style.backgroundColor = "transparent";
+                }
+         }
