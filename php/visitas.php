@@ -11,17 +11,30 @@ include_once '../plantillas/InicioDocumento.inc.php';
 <?php include_once '../plantillas/BarraNavegacion.inc.php';?>
 
 	<div class="container-fluid">
-		<center>
-			<h4 id="tabV"><br>Visitas dentro del fraccionamiento (Xalapa Ver, <?=$fechaActual;?>)</h4><br>
-			<form class="form-inline justify-content-center" id="formBuscarVisit" method="POST" action="visitas.php">
-  				<div class="form-group mb-2">
-   					 <input type="text" class="form-control" name="busquedaV" id="buscarVisitas" placeholder="Buscar">
- 			 	</div>
-  				 <div class="form-group mx-sm-3 mb-2">
-					 <button type="submit" name="btnFiltro" class="btn btn-info form-control">Buscar</button>
-				 </div>
-			</form>
-		</center>
+			<div class="row">
+				 <div class="col-md-4"></div>
+				 <div class="col-md-4">
+					  <center>
+							<h4 id="tabV"><br>Visitas dentro del fraccionamiento (Xalapa Ver, <?=$fechaActual;?>)</h4><br>
+							<form class="form-inline justify-content-center" id="formBuscarVisit" method="POST" action="visitas.php">
+  								<div class="form-group mb-2">
+   							 			<input type="text" class="form-control" name="busquedaV" id="buscarVisitas" placeholder="Buscar">
+ 			 						</div>
+  				 				<div class="form-group mx-sm-3 mb-2">
+					 						<button type="submit" name="btnFiltro" class="btn btn-info form-control">Buscar</button>
+				 					</div>
+							</form>
+						</center>
+				  </div>
+				  <div class="col-md-4 ayuda">
+					<div class="card text-white bg-dark mb-2" style="max-width: 15rem;">
+  							<div class="card-header"><h5 class="card-title">¿Como buscar?</h5></div>
+  							<div class="card-body">
+    								<p class="card-text">Puedes "Buscar" por <span class="textAyuda"> codigo, usuario, fecha, nombre, placas.</span></p>
+ 								 </div>
+						</div>
+					</div>
+	  	</div>
 	</div>
 	<div class="container-fluid">
 
