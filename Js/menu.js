@@ -39,7 +39,7 @@ function VistaSalida(){
 
      function VistaVisitantes(){ 
          tituloV = TabVisitantes.textContent;
-        busqueda =tituloV.indexOf("Visitas dentro del fraccionamiento");
+        busqueda =tituloV.indexOf("Visitas dentro del fracc.");
             if(busqueda==0){
                  Visitantes.style.backgroundColor = "#5C821A";
                  }else{

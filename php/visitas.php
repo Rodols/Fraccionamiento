@@ -12,10 +12,10 @@ include_once '../plantillas/InicioDocumento.inc.php';
 
 	<div class="container-fluid">
 			<div class="row">
-				 <div class="col-md-4"></div>
-				 <div class="col-md-4">
+				 <div class="col-md-3"></div>
+				 <div class="col-md-6">
 					  <center>
-							<h4 id="tabV"><br>Visitas dentro del fraccionamiento (Xalapa Ver, <?=$fechaActual;?>)</h4><br>
+							<h4 id="tabV"><br>Visitas dentro del fracc. (Xalapa Ver, <?=$fechaActual;?>)</h4><br>
 							<form class="form-inline justify-content-center" id="formBuscarVisit" method="POST" action="visitas.php">
   								<div class="form-group mb-2">
    							 			<input type="text" class="form-control" name="busquedaV" id="buscarVisitas" placeholder="Buscar">
@@ -26,7 +26,7 @@ include_once '../plantillas/InicioDocumento.inc.php';
 							</form>
 						</center>
 				  </div>
-				  <div class="col-md-4 ayuda">
+				  <div class="col-md-3 ayuda">
 					<div class="card text-white bg-dark mb-2" style="max-width: 15rem;">
   							<div class="card-header"><h5 class="card-title">¿Como buscar?</h5></div>
   							<div class="card-body">
