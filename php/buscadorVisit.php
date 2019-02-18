@@ -27,8 +27,8 @@ if($resultados){
                             <th width=\"160\"><b><center>Nombre</center></b></th>
                             <th width=\"200\"><b><center>Visita a</center></b></th>
                             <th \"100\"><b><center>Placas</center></b></th>
-                            <th width=\"200\"><b><center>MotivoVisita</center></b></th>
-                            <th width=\"200\"><b><center>Observaciones</center></b></th>
+                            <th width=\"170\"><b><center>MotivoVisita</center></b></th>
+                            <th width=\"170\"><b><center>Observaciones</center></b></th>
                             <th width=\"130\"><b><center>Imagenes</center></b></th>
                     </tr>
                 </thead>
@@ -49,8 +49,8 @@ while ($consulta = mysqli_fetch_array($resultados)) {
                             <td width=\"200\" nowrap>" . $consulta['nombre_ref'] . '<br/>'.
                             '<span class="titulo">'.'Dir. ' . $consulta['calle'] .' #'. $consulta['numero'] .'</span>'."</td>
                             <td width=\"100\" nowrap>" . $consulta['placas'] . "</td>
-                            <td width=\"200\" nowrap>" . $consulta['motivo_visita'] . "</td>
-                            <td width=\"200\" nowrap>" . $consulta['observaciones'] . "</td>
+                            <td width=\"170\" nowrap>" . $consulta['motivo_visita'] . "</td>
+                            <td width=\"170\" nowrap>" . $consulta['observaciones'] . "</td>
                             <td width=\"130\" nowrap><a href='$consulta[imagen_rostro]'  name=\"foto_r\">* ImgRostro</a><br/>
                                 <a href='$consulta[imagen_credencial]'  name=\"foto_c\">* ImgCredencial</a><br/>
                                 <a href='$consulta[imagen_coche]'  name=\"foto_v\">* ImgCoche</a></td>

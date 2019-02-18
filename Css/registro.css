@@ -18,7 +18,7 @@ td
 
  
   tr {
-    width: 99%;
+    width: 98%;
     display: inline-table;
     table-layout: fixed;
     }
@@ -75,5 +75,6 @@ color:blue;
     color: white !important;
 }
 .navbar-r:hover, .navbar-r:active {
-    color: #FF5722 !important;
+    color: black !important;
+    background: #FF5722 !important; 
 }
