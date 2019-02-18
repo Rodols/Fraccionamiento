@@ -19,7 +19,8 @@ function VistaEntrada(){
      tituloE = TabEntrada.textContent;
     busqueda =tituloE.indexOf("Registro de entrada");
         if(busqueda==0){
-             RegistroEntrada.style.backgroundColor = "#FF5722";
+            RegistroEntrada.style.backgroundColor = "#5C821A";    
+                            
         }   else{
                 RegistroEntrada.style.backgroundColor = "transparent";
              }
@@ -30,7 +31,7 @@ function VistaSalida(){
    tituloS = TabSalida.textContent;
     busqueda =tituloS.indexOf("Registro de salida");
       if(busqueda==0){
-         RegistroSalida.style.backgroundColor = "#FF5722";
+         RegistroSalida.style.backgroundColor = "#5C821A";
          }else{
              RegistroSalida.style.backgroundColor = "transparent";
         }
@@ -40,7 +41,7 @@ function VistaSalida(){
          tituloV = TabVisitantes.textContent;
         busqueda =tituloV.indexOf("Visitas dentro del fraccionamiento");
             if(busqueda==0){
-                 Visitantes.style.backgroundColor = "#FF5722";
+                 Visitantes.style.backgroundColor = "#5C821A";
                  }else{
                     Visitantes.style.backgroundColor = "transparent";
              }
@@ -50,7 +51,7 @@ function VistaSalida(){
             tituloB = TabBitacora.textContent;
              busqueda =tituloB.indexOf("Historial de visitas");
                 if(busqueda==0){
-                    Bitacora.style.backgroundColor = "#FF5722";
+                    Bitacora.style.backgroundColor = "#5C821A";
                 }else{
                  Bitacora.style.backgroundColor = "transparent";
                 }

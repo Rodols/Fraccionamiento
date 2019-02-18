@@ -2,7 +2,7 @@
 /* Todas las celdas de la tabla... */
 
     {
-     color: white;
+     color: #c6d166 !important;
     font-size: 14px;
    }
 td
@@ -13,7 +13,7 @@ td
 }
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th 
 {
-    background-color: #FF5722 ;
+    background-color: #c6d166 ;
   }
 
  
@@ -29,7 +29,7 @@ td
     }
     tbody{
       overflow-y: scroll;      
-      height: 370px;            
+      height: 380px;            
       width: 99%;
       position: absolute;
     }
@@ -44,17 +44,17 @@ body {
 }
 
 h3 {
-    color:#FF5722;
+    color:#c6d166;
  padding-right: 15px;
     font-weight: bold ;
 }
 
 .nav-item{
-    padding-right: 10px;
+    padding-right: 12px;
 }
 
 h1, h2,h4,h5 {
-    color: #FF5722 !important;
+    color: #5C821A !important;
     font-weight: bold ;
 }
 
@@ -64,6 +64,7 @@ color:blue;
 }
 .thead-dark{
     /* redondeo esquinas de barra de navegacion */
+    color: #c6d166 !important;
     border-radius: 5px !important; 
 }
 .navbar {
@@ -72,9 +73,11 @@ color:blue;
 }
 
 .navbar-r:link, .navbar-r:visited {
-    color: white !important;
+    color:white !important;
+    font-weight: bold;
 }
 .navbar-r:hover, .navbar-r:active {
-    color: black !important;
-    background: #FF5722 !important; 
+    color: #5C821A !important;
+    background: #c6d166 !important; 
+    font-weight: bold ;
 }

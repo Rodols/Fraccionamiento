@@ -10,7 +10,7 @@ $tipo = $_SESSION['tipo'];
 				<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     				<h3>RealDelBosque </h3>
     			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-					<li class="nav-item " ><a  href="registro_user.php" class=" btn btn-outline-danger">
+					<li class="nav-item " ><a  href="registro_user.php" class=" btn btn-outline-success">
 						<i class="material-icons">&#xe55a;</i> <span> <?=$user?></span></a>
 					</li>   
 					<li class="nav-item " ><a id="EntradaMenu" href="registro.php"  class=" btn btn-outline navbar-r nav-link ">
