@@ -1,18 +1,18 @@
 <?php
-$buscarText=$_POST['busquedaB'];
+$buscarText=$_POST['busquedaV'];
 if(isset($buscarText)){
     include_once "abrir_conexion.php";
 
     if (($buscarText == "")) {
-        $resultados = mysqli_query($conexion, "SELECT * FROM $tabla_db3 ORDER By visitante DESC");
+        $resultados = mysqli_query($conexion, "SELECT * FROM $tabla_db1 ORDER By fecha DESC");
     }
     if ($buscarText != "") {
-        $resultados = mysqli_query($conexion, "SELECT * FROM $tabla_db3  WHERE  
-            $tabla_db3.usuario LIKE '%". $buscarText ."%' OR
-            $tabla_db3.nombre LIKE '%". $buscarText ."%' OR
-            $tabla_db3.codigo LIKE '%". $buscarText ."%' OR
-            $tabla_db3.placas LIKE '%". $buscarText ."%' OR
-            $tabla_db3.fecha LIKE '%". $buscarText ."%' ORDER By visitante DESC ");
+        $resultados = mysqli_query($conexion, "SELECT * FROM $tabla_db1  WHERE  
+            $tabla_db1.usuario LIKE '%". $buscarText ."%' OR
+            $tabla_db1.nombre LIKE '%". $buscarText ."%' OR
+            $tabla_db1.codigo LIKE '%". $buscarText ."%' OR
+            $tabla_db1.placas LIKE '%". $buscarText ."%' OR
+            $tabla_db1.fecha LIKE '%". $buscarText ."%' ORDER By fecha DESC ");
 	}
 
 
@@ -44,7 +44,7 @@ while ($consulta = mysqli_fetch_array($resultados)) {
             <tr align=\"center\" >
                             <td width=\"85\" nowrap>" . $consulta['visitante'] .'<br/>'.'<span class="titulo">'.$consulta['codigo'].' </span>'. "</td>
                             <td width=\"80\" nowrap>" . $consulta['usuario'] . "</td>
-                            <td width=\"150\" nowrap>" . $consulta['fecha'].'<br/>'.'<span class="titulo">Entrada: </span>'.$consulta['entrada'] .'<br/>'.'<span class="titulo">Salida: </span>'.$consulta['salida'] . "</td>
+                            <td width=\"150\" nowrap>" . $consulta['fecha'].'<br/>'.'<span class="titulo">Entrada: </span>'.$consulta['entrada'] . "</td>
                             <td width=\"160\" nowrap>" . $consulta['nombre'] . "</td>
                             <td width=\"200\" nowrap>" . $consulta['nombre_ref'] . '<br/>'.
                             '<span class="titulo">'.'Dir. ' . $consulta['calle'] .' #'. $consulta['numero'] .'</span>'."</td>

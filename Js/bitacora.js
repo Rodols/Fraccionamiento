@@ -1,5 +1,5 @@
 $(function() {
-    $('#formBuscar').on("submit",function(e) {
+    $('#formBuscarBita').on("submit",function(e) {
       e.preventDefault(); // cancela el evento por defecto del formulario
       var parametros = $(this).serialize();
       $.ajax({
@@ -7,22 +7,21 @@ $(function() {
         type: "POST",
         data: parametros,
         success: function(response){
-           $("#visitantesTabla").html(response);
+           $("#bitacoraTabla").html(response);
         }
 
       })
   
     });
 
-    $('#busqueda').on("keyup",function(e){
-      var busqueda= $("#busqueda").val();
-      var selectBitacora = $("#selectBitacora").val();
-        $.ajax({
+    $('#buscarBitacora').on("keyup",function(e){
+      var busquedaB= $("#buscarBitacora").val();
+            $.ajax({
         url: "buscadorBita.php",
         type: "POST",
-        data: {busqueda,selectBitacora},
+        data: {busquedaB},
         success: function(response){
-          $("#visitantesTabla").html(response);
+          $("#bitacoraTabla").html(response);
         }
     });
   

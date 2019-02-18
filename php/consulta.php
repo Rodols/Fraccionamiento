@@ -66,15 +66,24 @@ if (isset($_POST['btnConsulta'])) {
 							<label for=\"nombre\">Nombre visitante</label>
 							<input type=\"text\" name=\"nombre\" value='$consulta[4]' readonly=\"readonly\" class=\"form-control\" id=\"nombre\">
 						</div>
-					
-						<div class=\"form-group form-inline\" >
-							<label for=\"calle\">Direcciòn</label><br>
-							<input type=\"text\" name=\"calle\" value='$consulta[6]' readonly=\"readonly\" class=\"form-control form-inline\" id=\"calle\" size=\"28\">
-							<input type=\"text\" name=\"numero\" value='$consulta[7]' readonly=\"readonly\" class=\"form-control form-inline\" id=\"numero\" size=\"8\">
+						<div class=\"form-group\">
+							<label>Direcciòn</label>
+						</div>
+						<div class=\"form-inline\" >
+							<div class=\"form-group mb-2\">
+								<input type=\"text\" name=\"calle\" value='$consulta[6]' readonly=\"readonly\" class=\"form-control\" id=\"calle\" size=\"31\">
+							</div>
+							<div class=\"form-group mx-3 mb-2\">
+								<input type=\"text\" name=\"numero\" value='$consulta[7]' readonly=\"readonly\" class=\"form-control\" id=\"numero\" size=\"8\">
+							</div>
 						</div>
 						<div class=\"form-group\">
 							<label for=\"referencia\">Nombre referencia</label>
 							<input type=\"text\" name=\"referencia\" value='$consulta[5]' readonly=\"readonly\" class=\"form-control\" id=\"referencia\">
+						</div>
+						<div class=\"form-group\">
+							<label for=\"placas\">Placas</label>
+							<input type=\"text\" name=\"placas\" value='$consulta[8]' readonly=\"readonly\" class=\"form-control\" id=\"placas\">
 						</div>
 						<div class=\"form-group\">
 							<label for=\"motivo\">Motivo de visita</label>
@@ -93,10 +102,6 @@ if (isset($_POST['btnConsulta'])) {
 							<label for=\"foto_r\">Foto-Credencial</label><br>
 							<input type=\"text\" readonly=\"readonly\" name=\"foto_c\" value='$consulta[12]' class=\"form-control\" ><br>
 							<img src='$consulta[12]'  width=\"400\" heigth=\"600\" name=\"foto_c\" />
-						</div>
-						<div class=\"form-group\">
-							<label for=\"placas\">Placas</label>
-							<input type=\"text\" name=\"placas\" value='$consulta[8]' readonly=\"readonly\" class=\"form-control\" id=\"placas\">
 						</div>
 						<div class=\"form-group form-inline\">
 							<label for=\"foto_v\">Foto-Vehiculo</label><br>
@@ -142,10 +147,10 @@ if (isset($_POST['btnConsulta'])) {
 							<label for=\"referencia\">Persona a quien visita</label>
 							<input type=\"text\" name=\"referencia\" value='$consulta[5]' readonly=\"readonly\" class=\"form-control\" id=\"referencia\">
 						</div>
-						<div class=\"form-group form-inline\" >
-							<label for=\"calle\">Direcciòn</label><br>
-							<input type=\"text\" name=\"calle\" value='$consulta[6]' readonly=\"readonly\" class=\"form-control form-inline\" id=\"calle\" size=\"28\">
-							<input type=\"text\" name=\"numero\" value='$consulta[7]' readonly=\"readonly\" class=\"form-control form-inline\" id=\"numero\" size=\"8\">
+						<div class=\"form-group\" >
+							<label for=\"calle\">Direcciòn</label>
+							<input type=\"text\" name=\"calle\" value='$consulta[6]' readonly=\"readonly\" class=\"form-control form-inline\" id=\"calle\" size=\"22\">
+							<input type=\"text\" name=\"numero\" value='$consulta[7]' readonly=\"readonly\" class=\"form-control form-inline\" id=\"numero\" size=\"5\">
 						</div>
 						<div class=\"form-group\">
 							<label for=\"motivo\">Motivo de visita</label>
