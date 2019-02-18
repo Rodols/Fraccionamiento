@@ -21,13 +21,13 @@ if($resultados){
     <br><table class=\"table table-bordered table-striped table-sm table-hover\">
                  <thead class=\"thead-dark\">
                     <tr>
-                            <th width=\"80\"><b><center>Visitante</center></b></th>
-                            <th width=\"65\"><b><center>Usuario</center></b></th>
-                            <th width=\"120\"><b><center>Fecha de registro</center></b></th>
-                            <th width=\"150\"><b><center>Nombre</center></b></th>
+                            <th width=\"75\"><b><center>Visitante</center></b></th>
+                            <th width=\"67\"><b><center>Usuario</center></b></th>
+                            <th width=\"117\"><b><center>Fecha de registro</center></b></th>
+                            <th width=\"152\"><b><center>Nombre</center></b></th>
                             <th width=\"150\"><b><center>Visita a</center></b></th>
-                            <th width=\"75\"><b><center>Placas</center></b></th>
-                            <th width=\"175\"><b><center>MotivoVisita</center></b></th>
+                            <th width=\"77\"><b><center>Placas</center></b></th>
+                            <th width=\"180\"><b><center>MotivoVisita</center></b></th>
                             <th width=\"180\"><b><center>Observaciones</center></b></th>
                             <th width=\"120\"><b><center>Imagenes</center></b></th>
                     </tr>
@@ -44,7 +44,7 @@ while ($consulta = mysqli_fetch_array($resultados)) {
             <tr align=\"center\" >
                             <td width=\"80\" nowrap>" . $consulta['visitante'] .'<br/>'.'<span class="titulo">'.$consulta['codigo'].' </span>'. "</td>
                             <td width=\"70\" nowrap>" . $consulta['usuario'] . "</td>
-                            <td width=\"130\" nowrap>" . $consulta['fecha'].'<br/>'.'<span class="titulo">Entrada: </span>'.$consulta['entrada'] .'<br/>'.'<span class="titulo">Salida: </span>'.$consulta['salida'] . "</td>
+                            <td width=\"125\" nowrap>" . $consulta['fecha'].'<br/>'.'<span class="titulo">Entrada: </span>'.$consulta['entrada'] .'<br/>'.'<span class="titulo">Salida: </span>'.$consulta['salida'] . "</td>
                             <td width=\"160\" nowrap>" . $consulta['nombre'] . "</td>
                             <td width=\"160\" nowrap>" . $consulta['nombre_ref'] . '<br/>'.
                             '<span class="titulo">'.'Dir. ' . $consulta['calle'] .' #'. $consulta['numero'] .'</span>'."</td>
