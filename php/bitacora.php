@@ -22,13 +22,16 @@ include_once '../plantillas/InicioDocumento.inc.php';
  		 				</div>
   						<div class="form-group mx-sm-3 mb-2">
 							<button type="submit"  name="btnFiltro" id="btnfiltro" class="btn btn-info form-control">Buscar</button>
-				    	</div>
+						</div>
+						<div class=" form-group mb-2" >
+							<button type="buton" id="ayudaBitacora" class="btn btn-outline-dark" style="color:green; font-weight: bold ;" >Ayuda</button>
+						</div>
 					</form>
 				</center>
 			</div>
 			<div class="col-md-3 ayuda">
-				<div class="card text-white bg-dark mb-2" style="max-width: 15rem;">
-  					<div class="card-header"><h5 class="card-title">¿Como buscar?</h5></div>
+				<div class="card text-white bg-dark mb-2" id="cardBita" style="max-width: 15rem; display: none;">
+  					<div class="card-header"><h5 class="card-title">¿Como buscar? </h5></div>
   					<div class="card-body">
     					<p class="card-text">Puedes "Buscar" por <span class="textAyuda"> codigo, usuario, fecha, nombre, placas.</span></p>
  					</div>

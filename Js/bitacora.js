@@ -1,5 +1,29 @@
 $(function() {
 
+  $('#ayudaBitacora').on("mouseenter",function(e) {
+    e.preventDefault(); // cancela el evento por defecto del formulario
+    var cardAyuda = document.getElementById("cardBita"); 
+    if(cardAyuda.style.display === 'none'){
+    cardAyuda.style.display = 'block';
+      }else{
+        cardAyuda.style.display = 'none';
+      }
+     });
+
+     
+  $('#ayudaBitacora').on("mouseleave",function(e) {
+    e.preventDefault(); // cancela el evento por defecto del formulario
+    var cardAyuda = document.getElementById("cardBita"); 
+    if(cardAyuda.style.display === 'none'){
+    cardAyuda.style.display = 'block';
+      }else{
+        cardAyuda.style.display = 'none';
+      }
+     });
+
+  
+
+
   function listaBitacora(){
     var busquedaB= $("#buscarBitacora").val();
             $.ajax({
@@ -29,6 +53,8 @@ $(function() {
       })
   
     });
+
+
 
     $('#buscarBitacora').on("keyup",function(e){
       var busquedaB= $("#buscarBitacora").val();
