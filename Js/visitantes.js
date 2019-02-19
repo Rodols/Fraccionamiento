@@ -1,5 +1,26 @@
 $(function() {
 
+  $('#ayudaVisitantes').on("mouseenter",function(e) {
+    e.preventDefault(); // cancela el evento por defecto del formulario
+    var cardAyuda = document.getElementById("cardVisitantes"); 
+    if(cardAyuda.style.display === 'none'){
+    cardAyuda.style.display = 'block';
+      }else{
+        cardAyuda.style.display = 'none';
+      }
+     });
+
+     
+  $('#ayudaVisitantes').on("mouseleave",function(e) {
+    e.preventDefault(); // cancela el evento por defecto del formulario
+    var cardAyuda = document.getElementById("cardVisitantes"); 
+    if(cardAyuda.style.display === 'none'){
+    cardAyuda.style.display = 'block';
+      }else{
+        cardAyuda.style.display = 'none';
+      }
+     });
+
     function listaVisitas(){
       var busquedaV= $("#buscarVisitas").val();
       $.ajax({
