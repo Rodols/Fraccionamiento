@@ -20,6 +20,7 @@ td
      padding-left: 2px;
   }
 
+
   .card-title{
       padding-top: 0px;
       max-height: 5px;
@@ -28,6 +29,21 @@ td
     padding-top: 0px;
     max-height: 50px;
 }
+
+#marcoConsulta{
+    padding-top: 15px;
+    margin-top:15px;
+    padding-bottom:15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position:absolute;
+    border:2px solid;
+    border-color:#c6d166;
+    width:700px;
+    height:550px;
+    border-radius: 20px !important;
+    overflow-y: scroll; 
+    }
   
   p{
     font-size: 13px;
