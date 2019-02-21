@@ -15,7 +15,7 @@ if ($_SESSION['session_exito'] != 1) {
 	<div class="container-fluid">
 			<center>
 			<h4 id="tabS" ><br>Registro de salida (Xalapa Ver, <?=$fechaActual;?>)</h4><br>
-			
+			</center>
 			<div class="row">
 				<div class="col-md-3">
 					<form method="POST" class="form-inline" id="formSalida" action="consulta.php">
@@ -29,7 +29,7 @@ if ($_SESSION['session_exito'] != 1) {
 					<div id="formVistaSalida"></div>
 				</div>
 			</div>
-			</center>
+			
 	</div>
 <script src="../Js/salida.js"></script>
 <?php
