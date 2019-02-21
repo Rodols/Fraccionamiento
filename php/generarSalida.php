@@ -1,8 +1,8 @@
 <?php
 if (isset($_POST['codigo'])) {
 	
-	$nombre_ref      	 = $_POST['referencia'];
-	$usuario      = $_POST['usuario'];
+	$nombre_ref    = $_POST['referencia'];
+	$usuario      = $_POST['operario'];
 	$codigo      = $_POST['codigo'];
     $fecha       = $_POST['fecha'];
     $entrada     = $_POST['entrada'];
@@ -41,7 +41,7 @@ if (isset($_POST['codigo'])) {
 	 $respuesta = $conexion->query("INSERT INTO $tabla_db3 (
 				visitante,codigo,usuario,fecha,entrada,salida,nombre,nombre_ref,calle,numero,placas,motivo_visita,observaciones,
 				imagen_rostro,imagen_credencial,imagen_coche)
-				 values (Null,'$codigo','$usuario','$fecha','$entrada',NOW(),'$nombre','$nombre_ref','$calle','$numero','$placas','$motivo',
+				 values (Null,'$codigo','$operario','$fecha','$entrada',NOW(),'$nombre','$nombre_ref','$calle','$numero','$placas','$motivo',
 				 '$observacion','$foto_r','$foto_c','$foto_v')");
 
     if ($respuesta==true) {
@@ -60,7 +60,4 @@ if (isset($_POST['codigo'])) {
 		";
     }
 }
-?>
-<?php
-include_once '../plantillas/FinDocumento.inc.php';
 ?>

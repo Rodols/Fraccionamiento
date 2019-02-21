@@ -11,11 +11,11 @@ if (isset($_POST['cod'])) {
 						<div class=\"form-row\">
 							<div class=\"col-md-3 mb-3\">
 								<label for=\"codigo\">Codigo</label>
-								<input type=\"text\" name=\"codigo\" value='$consulta[0]' readonly=\"readonly\" class=\"form-control\" id=\"codigo\">
+								<input type=\"text\" name=\"codigo\" value='$consulta[0]' readonly=\"readonly\" class=\"form-control \" id=\"codigo\">
 							</div>
 							<div class=\"col-md-3 mb-3\">
 								<label for=\"usuario\">Usuario</label>
-								<input type=\"text\" name=\"usuario\" value='$consulta[1]' readonly=\"readonly\" class=\"form-control\" id=\"usuario\">
+								<input type=\"text\" name=\"operario\" value='$consulta[1]' readonly=\"readonly\" class=\"form-control\" id=\"operario\">
 							</div>
 
 							<div class=\"col-md-3 mb-3\">
@@ -98,7 +98,4 @@ if (isset($_POST['cod'])) {
             }
     include_once "cerrar_conexion.php";
 }
-?>
-<?php
-include_once '../plantillas/FinDocumento.inc.php';
 ?>
