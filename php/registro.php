@@ -11,6 +11,7 @@ if ($_SESSION['session_exito'] != 1) {
 <?php include_once '../plantillas/BarraNavegacion.inc.php';
 }
 ?>
+<div class="contenedor container-fluid" id="pantallaR">
         <center>
             <h4 id="tabE"><br>Registro de entrada (Xalapa Ver, <?=$fechaActual;?>)</h4><br>
                 </center>
@@ -111,6 +112,7 @@ if ($_SESSION['session_exito'] != 1) {
 </div>
 
 <div class="col-md-3"></div>
+</div>
 </div>
 <script type="text/javascript" src="../Js/registro.js"></script>
 <?php
