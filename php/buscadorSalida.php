@@ -14,7 +14,7 @@ if (isset($_POST['cod'])) {
 								<input type=\"text\" name=\"codigo\" value='$consulta[0]' readonly=\"readonly\" class=\"form-control \" id=\"codigo\">
 							</div>
 							<div class=\"col-md-3 mb-3\">
-								<label for=\"usuario\">Usuario</label>
+								<label for=\"operario\">Usuario</label>
 								<input type=\"text\" name=\"operario\" value='$consulta[1]' readonly=\"readonly\" class=\"form-control\" id=\"operario\">
 							</div>
 
@@ -86,14 +86,13 @@ if (isset($_POST['cod'])) {
 							</div>
 						</div>
 						<center>
-		 					<br><input type=\"submit\" value=\"Salida\" class=\"btn btn-danger\" name=\"btnSalida\"><br>
+		 					<br><input type=\"submit\" value=\"Salida\" class=\"btn btn-danger\" name=\"btnSalida\">
 		 				</center>
 				    </form>
 			</div>	
 			</div>
 							";
             } 
-				echo "<br>";
 			
             }
     include_once "cerrar_conexion.php";

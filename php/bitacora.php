@@ -10,7 +10,7 @@ include_once '../plantillas/InicioDocumento.inc.php';
 <body onload="VistaBitacora();">
 <?php include_once '../plantillas/BarraNavegacion.inc.php';?>
 
-	<div class="container-fluid">
+	<div class="contenedor container-fluid">
 		<div class="row">
 			<div class="col-md-3"></div>
 			 <div class="col-md-6">
@@ -37,10 +37,8 @@ include_once '../plantillas/InicioDocumento.inc.php';
  					</div>
 				</div>
 			</div>
-		</div>
-	</div>
+</div>
 	
-	<div class="container-fluid ">
  		<div id="bitacoraTabla"></div>
 	</div>
 <script src="../Js/bitacora.js"></script>

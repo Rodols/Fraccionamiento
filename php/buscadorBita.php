@@ -18,7 +18,7 @@ if(isset($buscarText)){
 
 if($resultados){
     echo "
-    <br><table class=\"table table-bordered table-striped table-sm table-hover\">
+    <table class=\"table table-bordered table-striped table-sm table-hover\">
                  <thead class=\"thead-dark\">
                     <tr>
                             <th width=\"75\"><b><center>Visitante</center></b></th>

@@ -2,7 +2,7 @@
 if (isset($_POST['codigo'])) {
 	
 	$nombre_ref    = $_POST['referencia'];
-	$usuario      = $_POST['operario'];
+	$operario      = $_POST['operario'];
 	$codigo      = $_POST['codigo'];
     $fecha       = $_POST['fecha'];
     $entrada     = $_POST['entrada'];
