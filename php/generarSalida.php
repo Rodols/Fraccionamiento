@@ -49,11 +49,12 @@ if (isset($codigo)) {
         mysqli_query($conexion, "DELETE FROM $tabla_db1 WHERE codigo = $codigo");
         include_once "cerrar_conexion.php";
         echo "
-					<h1>Los datos fueron registrados la Bitacora!</h1>
+					<h4>Salida registrada en Bitacora!</h4><br>
+					<h5>Ingresa un nuevo codigo....</h5>
 		";
     } else {
         echo "
-					<h1>Ocurrio un error ..vuelve a intentarlo por favor!</h1>
+					<h4>Ocurrio un error ..vuelve a intentarlo por favor!</h4>
 		";
     }
 }

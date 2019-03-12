@@ -35,13 +35,13 @@ $(function() {
       type: "POST",
       url: "generarSalida.php",
       data: parametros,
+      beforeSend: function(objeto) {
+          $("#formVistaSalida").html("Enviando...");
+      },
       success: function(response) {
-        $("#formVistaSalida").html(response);
-        setTimeout(limpiar,2000);
+          $("#formVistaSalida").html(response);
+   
       }
-      });
-    }
-
-    function limpiar(){
-      $("#formVistaSalida").html("");
+  });
+  event.preventDefault();
     }
