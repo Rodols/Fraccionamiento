@@ -1,5 +1,6 @@
 <?php
-if (isset($_POST['codigo'])) {
+$codigo = $_POST['codigo'];
+if (isset($codigo)) {
 	
 	$nombre_ref    = $_POST['referencia'];
 	$operario      = $_POST['operario'];
@@ -48,15 +49,11 @@ if (isset($_POST['codigo'])) {
         mysqli_query($conexion, "DELETE FROM $tabla_db1 WHERE codigo = $codigo");
         include_once "cerrar_conexion.php";
         echo "
-					<script>
-				alert(\"Los datos fueron registrados la Bitacora!\")
-				</script>
+					<h1>Los datos fueron registrados la Bitacora!</h1>
 		";
     } else {
         echo "
-					<script>
-				alert(\"Ocurrio un error ..vuelve a intentarlo por favor!\")
-				</script>
+					<h1>Ocurrio un error ..vuelve a intentarlo por favor!</h1>
 		";
     }
 }

@@ -1,13 +1,13 @@
 <?php
-if (isset($_POST['cod'])) {
-	$codigo = $_POST['cod'];
-    if ($codigo != "") {
+$codigo_entrada = trim($_POST['cod']);
+if (isset($codigo_entrada)) {
+    if ($codigo_entrada != "") {
         include_once "abrir_conexion.php";
-        $resultados = mysqli_query($conexion, "SELECT * FROM $tabla_db1 WHERE codigo = $codigo");
-
+        $resultados = mysqli_query($conexion, "SELECT * FROM $tabla_db1 WHERE codigo = $codigo_entrada");
         while ($consulta = mysqli_fetch_array($resultados)) {
-          echo "	<div id=\"marcoConsulta\">
-            	   <form method=\"POST\" id=\"formDarSalida\" class=\"text-align-center\" action=\"generarSalida.php\">
+					echo "	
+					<div id=\"marcoConsulta\">
+            	   <form method=\"POST\" id=\"formDarSalida\" class=\"text-align-center\"  action=\"#\">
 						<div class=\"form-row\">
 							<div class=\"col-md-3 mb-3\">
 								<label for=\"codigo\">Codigo</label>
@@ -86,15 +86,16 @@ if (isset($_POST['cod'])) {
 							</div>
 						</div>
 						<center>
-		 					<br><input type=\"submit\" value=\"Salida\" class=\"btn btn-danger\" name=\"btnSalida\">
+		 					<br><input type=\"submit\" value=\"Salida\" class=\"btn btn-danger\" onclick=\"DarSalida();\" name=\"btnSalida\">
 		 				</center>
 				    </form>
 			</div>	
 			</div>
 							";
             } 
-			
+
+	 include_once "cerrar_conexion.php";		
             }
-    include_once "cerrar_conexion.php";
+   
 }
 ?>

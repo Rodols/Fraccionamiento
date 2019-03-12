@@ -1,6 +1,5 @@
 $(function() {
     $('#formSalida').on("submit",function(e) { 
-      
       e.preventDefault(); // cancela el evento por defecto del formulario
       var cod = $("#textoCod").val();
       $.ajax({
@@ -8,10 +7,8 @@ $(function() {
         type: "POST",
         data: {cod},
         success: function(response){  
-          $("#formVistaSalida").style.display="block";
           $("#formVistaSalida").html(response);
         }
-
       })
   
     });
@@ -27,26 +24,24 @@ $(function() {
         }
     });
   
+
     });
-
-    $('#formDarSalida').on("submit",function(e) {
-     
-      e.preventDefault(); // cancela el evento por defecto del formulario
-      var parametros = $(this).serialize();
-      $.ajax({
-        url: "generarSalida.php",
-        type: "POST",
-        data: {parametros},
-        success: function(response){
-
-                }
-
-      })
-  
-    });
-
-
-
-    
 
   });
+
+    function DarSalida(){
+     var parametros = $('#formDarSalida').serialize();
+     $.ajax({
+      type: "POST",
+      url: "generarSalida.php",
+      data: parametros,
+      success: function(response) {
+        $("#formVistaSalida").html(response);
+        setTimeout(limpiar,2000);
+      }
+      });
+    }
+
+    function limpiar(){
+      $("#formVistaSalida").html("");
+    }
