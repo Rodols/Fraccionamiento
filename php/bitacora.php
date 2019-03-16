@@ -12,7 +12,7 @@ include_once '../plantillas/InicioDocumento.inc.php';
 
 	<div class="contenedor container-fluid">
 		<div class="row">
-			<div class="col-md-3"></div>
+			<div class="col-md-3"> </div>
 			 <div class="col-md-6">
 				<center>
 					<h4 id="tabB"><br>Historial de visitas (Xalapa Ver, <?=$fechaActual;?>)</h4><br>
@@ -20,16 +20,20 @@ include_once '../plantillas/InicioDocumento.inc.php';
   						<div class="form-group mb-2 ">
     						<input type="text" class="form-control" name="busquedaB" id="buscarBitacora"  placeholder="Buscar">
  		 				</div>
-  						<div class="form-group mx-sm-3 mb-2">
+  						<div class="form-group mx-sm-2 mb-2">
 							<button type="submit"  name="btnFiltro" id="btnfiltro" class="btn btn-info form-control">Buscar</button>
 						</div>
-						<div class=" form-group mb-2" >
+						<div class=" form-group mx-sm-3 mb-2" >
 							<button type="buton" id="ayudaBitacora" class="btn btn-outline-dark" style="color:green; font-weight: bold ;" >Ayuda</button>
+						</div>
+						<div class=" form-group mb-2" >
+							<button type="buton" id="reporteBtn" class="btn btn-outline-danger" style=" font-weight: bold ;" >Reporte PDF</button>
 						</div>
 					</form>
 				</center>
 			</div>
-			<div class="col-md-3 ayuda">
+			<div class="col-md-3 ayuda" id="enlace">
+
 				<div class="card text-white bg-dark mb-2" id="cardBita" style="max-width: 15rem; display: none;">
   					<div class="card-header"><h5 class="card-title">¿Como buscar? </h5></div>
   					<div class="card-body">

@@ -21,7 +21,22 @@ $(function() {
       }
      });
 
-  
+
+     $('#reporteBtn').on("click",function() {
+      var clave = 'reporte';
+        $.ajax({
+          url: "generarReporte.php",
+         type: "POST",
+         data: {clave},
+         success: function(response){
+           $("#ListaVisitas").html(response);
+           alert("El reporte se comenzara a crear, puede tardar varios minutos. Deseas continuar?");
+           window.location.href='../php/printPdf.php';
+          }
+        });
+       });
+
+
 
 
   function listaBitacora(){
@@ -34,7 +49,6 @@ $(function() {
           $("#bitacoraTabla").html(response);
         }
     });
-
   }
 
   listaBitacora();
@@ -55,7 +69,6 @@ $(function() {
     });
 
 
-
     $('#buscarBitacora').on("keyup",function(e){
       var busquedaB= $("#buscarBitacora").val();
             $.ajax({
@@ -66,7 +79,8 @@ $(function() {
           $("#bitacoraTabla").html(response);
         }
     });
-  
     });
 
   });
+
+  
