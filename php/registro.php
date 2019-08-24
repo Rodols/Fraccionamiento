@@ -23,12 +23,12 @@ if ($_SESSION['session_exito'] != 1) {
         <form method="POST" action="registro.php" enctype="multipart/form-data">
             <div class="form-row">
                 <div class="col-md-4 mb-3">
-                    <label for="cod">Codigo</label>
+                    <label for="cod">Código</label>
                     <input type="text" name="cod" required="" class="form-control" id="cod">
                 </div>
 
                 <div class="col-md-8 mb-3">
-                    <label for="nombre">Nombre visitante</label>
+                    <label for="nombre">Nombre del visitante</label>
                     <input type="text" name="nombre" required="" class="form-control" id="nombre">
                 </div>
             </div>
@@ -61,9 +61,9 @@ if ($_SESSION['session_exito'] != 1) {
                         </select>
                 </div>
                 <div class="col-md-2 mb-3">
-                    <label for="select1" >Numero</label><br>
+                    <label for="select1" >Número</label><br>
                     <select id="select2" class="form-control" name="select2">
-                        <option value="numero" >Numero</option>
+                        <option value="" >Numero</option>
                     </select>
                 </div>
             </div>  
@@ -74,20 +74,24 @@ if ($_SESSION['session_exito'] != 1) {
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="observacion">Observaciones</label>
-                    <input type="text" name="observacion" required="" class="form-control" id="observacion">
+                    <input type="text" name="observacion" class="form-control" id="observacion">
                  </div>
             </div>
                <div class="form-group">
-              <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" /><b>Accseso en vehiculo</b>
+              <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" /><b>Acceso en vehículo</b>
                 </div>
            <div id="content" style="display: none;">
                 <div class="form-row">
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-3 mb-3">
                         <label for="placas">Placas</label>
                         <input type="text" name="placas"  class="form-control" id="placas">
                      </div>
+                     <div class="col-md-3 mb-3">
+                        <label for="vehiculo">Vehículo</label>
+                        <input type="text" name="vehiculo"  class="form-control" id="vehiculo">
+                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="ImgCoche">Captura de vehiculo</label>
+                        <label for="ImgCoche">Captura de vehículo</label>
                         <input type="file" class="form-control-file" id="ImgCoche" name="ImgCoche">
                     </div>
                 </div>
@@ -109,6 +113,7 @@ if ($_SESSION['session_exito'] != 1) {
 
         </form>
     </div>
+    
 </div>
 
 <div class="col-md-3" >
@@ -140,6 +145,7 @@ if (isset($_POST['btn1'])) {
     $calle       = $_POST['select1'];
     $numero      = $_POST['select2'];
     $placas      = $_POST['placas'];
+    $vehiculo      = $_POST['vehiculo'];
     $motivo      = $_POST['motivo'];
     $observacion = $_POST['observacion'];
 
@@ -166,25 +172,25 @@ if (isset($_POST['btn1'])) {
     }
     
 
-    if (($numero != "numero") && ($codigo != "") && ($nombre != "") && ($motivo != "")) {
+    if (($numero != "") && ($codigo != "") && ($nombre != "") && ($motivo != "")) {
         include_once "abrir_conexion.php";
 
-        $realizado = $conexion->query("INSERT INTO $tabla_db1 (
-            codigo,usuario,fecha,entrada,nombre,nombre_ref,calle,numero,placas,motivo_visita,observaciones,
+        $registradoBd = $conexion->query("INSERT INTO $tabla_db1 (
+            codigo,usuario,fecha,entrada,nombre,nombre_ref,calle,numero,placas,vehiculo,motivo_visita,observaciones_entrada,
             imagen_rostro,imagen_credencial,imagen_coche)
-             values ('$codigo','$user',NOW(),NOW(),'$nombre','$nombre_ref','$calle','$numero','$placas','$motivo',
+             values ('$codigo','$user',NOW(),NOW(),'$nombre','$nombre_ref','$calle','$numero','$placas','$vehiculo','$motivo',
              '$observacion','$destinoR','$destinoC','$destinoV')");
-
-        if ($realizado==true){
+        if ($registradoBd==true){
             echo "
                     <script>
                 alert(\"Los datos fueron registrados!\")
                 </script>
         ";
         } else {
+         
             echo "
                 <script>
-                alert(\"Ocurrio un error..Porfavor vuelve a intentarlo\")
+                alert(\"Ocurrio un error..Porfavor vuelve a intentarlo $observacion \" )
                 </script>
         ";
         $buscarGafete = mysqli_query($conexion, "SELECT * FROM $tabla_db1 WHERE codigo = $codigo");

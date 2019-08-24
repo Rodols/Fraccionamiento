@@ -2,7 +2,7 @@ function populate(s1, s2) {
     var s1 = document.getElementById(s1);
     var s2 = document.getElementById(s2);
     s2.innerHTML = "";
-    var optionArray = ["numero|Numero"];
+    var optionArray = ["nosabe|No sabe"];
     var numero_de_casas = 0;
     switch (s1.value) {
         case "Asturia":

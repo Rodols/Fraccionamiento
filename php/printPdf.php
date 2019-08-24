@@ -11,7 +11,7 @@ try {
     $pdf = new Html2Pdf('P', 'A4', 'es', true, 'UTF-8', 3);
     $pdf->pdf->SetDisplayMode('fullpage');
     $pdf->writeHTML($html);
-    $pdf->output('pdf_generado.pdf');
+    $pdf->output('BitacoraRealDelBosque.pdf');
   } catch (Html2PdfException $e) {
     $pdf->clean();
     $formatter = new ExceptionFormatter($e);

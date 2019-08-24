@@ -77,19 +77,19 @@ td
         color: #c6d166;
     }
   tr {
-    width: 100%;
+    width:90%;
     display: inline-table;
     table-layout: fixed;
     }
     
-    table{
-             
+    table{     
      display: -moz-groupbox;   
     }
+
     tbody{
       overflow-y: scroll;      
-      height: 380px;            
-      width: auto;
+      height: 400px;            
+      width: 95%;
       position: absolute;
     }
   
@@ -100,6 +100,16 @@ body {
     background-image: url("../Imagenes/skulls.png");
     color:black !important;
     font-weight: bold;
+}
+
+#alertagreen{
+    background-color: green;
+}
+#alertayellow{
+    background-color: yellow;
+}
+#alertared{
+    background-color: red
 }
 
 h3 {

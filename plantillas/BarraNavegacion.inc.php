@@ -16,19 +16,19 @@ $tipo = $_SESSION['tipo'];
 					<li class="nav-item " ><a id="EntradaMenu" href="registro.php"  class=" btn btn-outline navbar-r nav-link ">
 						 <i class="material-icons">&#xe85d;</i> <span> RegistroDeEntrada</span></a>
       				 </li>
-      				<li class="nav-item "><a id="SalidaMenu" class="nav-link navbar-r  btn btn-outline " href="consulta.php">
+      				<li class="nav-item "><a id="SalidaMenu" class="nav-link btn btn-outline " href="consulta.php">
 						  <i class="material-icons">&#xe862;</i><span>RegistroDeSalida</span></a>
      				 </li>
-					<li class="nav-item "><a id="VisitantesMenu" href="visitas.php" class="nav-link navbar-r  btn btn-outline">
+					<li class="nav-item "><a id="VisitantesMenu" href="visitas.php" class="nav-link  btn btn-outline">
 						 <i class="material-icons">&#xe2c9;</i> <span> Visitantes</span></a>
       				 </li>
-      				<li class="nav-item "><a id="BitacoraMenu" class="nav-link navbar-r  btn btn-outline " href="bitacora.php">
+      				<li class="nav-item "><a id="BitacoraMenu" class="nav-link  btn btn-outline " href="bitacora.php">
 						  <i class="material-icons">&#xe0e0;</i><span>Bitacora</span></a>
 					   </li>
 				 </ul>
 				
 				<ul class="nav navbar-nav navbar-right">
-					<li><a class="navbar-r nav-link btn btn-outline" href="../index.php">Salir</a></li>
+					<li><a class=" nav-link btn btn-outline" href="../index.php">Salir</a></li>
 				</ul>
 			</div>
 		</nav>

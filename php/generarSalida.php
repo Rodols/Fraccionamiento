@@ -11,12 +11,19 @@ if (isset($codigo)) {
 	$calle       = $_POST['calle'];
     $numero      = $_POST['numero'];
     $motivo      = $_POST['motivo'];
-	$observacion = $_POST['observacion'];
+	$observacion_entrada = $_POST['obentrada'];
+	$observacion_salida = $_POST['obsalida'];
 
 		if(isset($_POST['placas'])){
 			$placas      = $_POST['placas'];
 		}else{
 			$placas="sin vehiculo";
+		}
+
+		if(isset($_POST['vehiculo'])){
+			$vehiculo      = $_POST['vehiculo'];
+		}else{
+			$vehiculo="sin vehiculo";
 		}
 
 		if(isset($_POST['foto_c'])){
@@ -40,10 +47,10 @@ if (isset($codigo)) {
 
 	
 	 $respuesta = $conexion->query("INSERT INTO $tabla_db3 (
-				visitante,codigo,usuario,fecha,entrada,salida,nombre,nombre_ref,calle,numero,placas,motivo_visita,observaciones,
+				visitante,codigo,usuario,fecha,entrada,salida,nombre,nombre_ref,calle,numero,placas,vehiculo,motivo_visita,observaciones_entrada,observaciones_salida,
 				imagen_rostro,imagen_credencial,imagen_coche)
-				 values (Null,'$codigo','$operario','$fecha','$entrada',NOW(),'$nombre','$nombre_ref','$calle','$numero','$placas','$motivo',
-				 '$observacion','$foto_r','$foto_c','$foto_v')");
+				 values (NULL,'$codigo','$operario','$fecha','$entrada',NOW(),'$nombre','$nombre_ref','$calle','$numero','$placas','$vehiculo','$motivo',
+				 '$observacion_entrada','$observacion_salida','$foto_r','$foto_c','$foto_v')");
 
     if ($respuesta==true) {
         mysqli_query($conexion, "DELETE FROM $tabla_db1 WHERE codigo = $codigo");

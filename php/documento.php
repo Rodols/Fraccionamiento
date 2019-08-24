@@ -33,6 +33,7 @@ while ($row = mysqli_fetch_array($resultado))
                   , Salida:<?=$row['salida']?><br>
                 &nbsp; &nbsp; &nbsp; &nbsp;Visita a: <?=$row['nombre_ref']?>
                  Placas: <?=$row['placas']?>
+                 Vehiculo: <?=$row['vehiculo']?>
                 Observaciones: <?=$row['observaciones']?>, MotivoDeVisita: <?=$row['motivo_visita']?></p><hr>
                   
              <?php  
