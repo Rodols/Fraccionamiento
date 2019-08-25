@@ -13,6 +13,7 @@ if (isset($codigo)) {
     $motivo      = $_POST['motivo'];
 	$observacion_entrada = $_POST['obentrada'];
 	$observacion_salida = $_POST['obsalida'];
+	$alerta      = $_POST['alerta'];
 
 		if(isset($_POST['placas'])){
 			$placas      = $_POST['placas'];
@@ -47,10 +48,10 @@ if (isset($codigo)) {
 
 	
 	 $respuesta = $conexion->query("INSERT INTO $tabla_db3 (
-				visitante,codigo,usuario,fecha,entrada,salida,nombre,nombre_ref,calle,numero,placas,vehiculo,motivo_visita,observaciones_entrada,observaciones_salida,
+				visitante,codigo,usuario,fecha,entrada,salida,nombre,nombre_ref,calle,numero,placas,vehiculo,motivo_visita,observaciones_entrada,observaciones_salida,alerta,
 				imagen_rostro,imagen_credencial,imagen_coche)
 				 values (NULL,'$codigo','$operario','$fecha','$entrada',NOW(),'$nombre','$nombre_ref','$calle','$numero','$placas','$vehiculo','$motivo',
-				 '$observacion_entrada','$observacion_salida','$foto_r','$foto_c','$foto_v')");
+				 '$observacion_entrada','$observacion_salida','$alerta','$foto_r','$foto_c','$foto_v')");
 
     if ($respuesta==true) {
         mysqli_query($conexion, "DELETE FROM $tabla_db1 WHERE codigo = $codigo");

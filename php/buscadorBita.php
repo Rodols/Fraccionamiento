@@ -20,14 +20,14 @@ if($resultados){
     echo "
     <table class=\"table table-bordered table-striped table-sm table-hover\">
                  <thead class=\"thead-dark\">
-                    <tr>
-                            <th width=\"75\"><b><center>Registro</center></b></th>
-                            <th width=\"117\"><b><center>Fecha de registro</center></b></th>
-                            <th width=\"152\"><b><center>Nombre</center></b></th>
-                            <th width=\"150\"><b><center>Visita a</center></b></th>
-                            <th width=\"170\"><b><center>MotivoVisita</center></b></th>
-                            <th width=\"180\"><b><center>Observaciones</center></b></th>
-                            <th width=\"120\"><b><center>Imagenes</center></b></th>
+                    <tr align=\"center\" >
+                            <th width=\"80\" nowrap><b>Registro</b></th>
+                            <th width=\"125\" nowrap><b>Fecha de registro</b></th>
+                            <th width=\"160\" nowrap><b>Nombre</center></b></th>
+                            <th width=\"160\" nowrap><b>Visita a</b></th>
+                            <th width=\"170\" nowrap><b>MotivoVisita</b></th>
+                            <th width=\"190\" nowrap><b>Observaciones</b></th>
+                            <th width=\"130\" nowrap><b>Imagenes</b></th>
                     </tr>
                 </thead>
                 <tbody >
@@ -39,7 +39,7 @@ while ($consulta = mysqli_fetch_array($resultados)) {
 
         echo
             "
-            <tr align=\"center\" >
+            <tr align=\"center\" class=". $consulta[alerta] .">
                             <td width=\"80\" nowrap>" . $consulta['visitante'] .'<br/>'.'<span class="titulo">'.$consulta['codigo'].' </span>'.'<br>'.  $consulta['usuario'] ."</td>
                             <td width=\"125\" nowrap>" . $consulta['fecha'].'<br/>'.'<span class="titulo">Entrada: </span>'.$consulta['entrada'] .'<br/>'.'<span class="titulo">Salida: </span>'.$consulta['salida'] . "</td>
                             <td width=\"160\" nowrap>" . $consulta['nombre'] .'<br><span class="titulo">Placas: </span>'. $consulta['placas'] .'<br/>'.'<span class="titulo">'.'Vehículo:  </span>'.$consulta['vehiculo']." </td>

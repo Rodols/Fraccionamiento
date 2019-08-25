@@ -78,40 +78,32 @@ if (isset($codigo_entrada)) {
 							<input type=\"text\" name=\"obsalida\" class=\"form-control\" id=\"obsalida\">
 						</div>
 						</div>
-						<div class=\"mt-2\">
-							<label class=\"mr-4\">Semaforo de alerta: </label>
-								<div class=\"form-check form-check-inline mr-4\">
-									<input class=\"form-check-input btn-success \" type=\"radio\" value=\"green\" name=\"alerta\"  id=\"alertagreen\" >
-									<label class=\"form-check-label btn-success\" for=\"alertagreen\">   Verde
+						<div class=\"btn-group btn-group-toggle\" data-toggle=\"buttons\">
+						<label class=\"mr-4\">  Semaforo de alerta: </label>
+									<label class=\"btn btn-secondary active\" id=\"alertagreen\" > 
+									<input  type=\"radio\" value=\"green\" name=\"alerta\" checked> Verde 
 									</label>
-								</div>
-								<div class=\"form-check form-check-inline mr-4\">
-									<input class=\"form-check-input btn-warning \" type=\"radio\" value=\"yellow\"  name=\"alerta\"  id=\"alertayellow\" >
-									<label class=\"form-check-label btn-warning\" for=\"alertayellow\">   Amarillo
+									<label class=\"btn btn-secondary\" id=\"alertayellow\" >
+									<input type=\"radio\" value=\"yellow\"  name=\"alerta\"  > Amarillo
+									</label>	
+									<label class=\"btn btn-secondary\" id=\"alertared\">   
+									<input type=\"radio\" value=\"red\"  name=\"alerta\"  > Rojo
 									</label>
-								</div>
-								<div class=\"form-check form-check-inline mr-4\">
-									<input class=\"form-check-input btn-danger \" type=\"radio\" value=\"red\"  name=\"alerta\"  id=\"alertared\" >
-									<label class=\"form-check-label btn-danger\" for=\"alertared\">   Rojo
-									</label>
-								</div>
 						</div>		
-
-						
 						<div class=\"form-row mt-2\">
 							<div class=\"col-md-4 mb-3\">
 								<label for=\"foto_c\">Foto-Rostro</label><br>
-								<input type=\"text\" readonly=\"readonly\" name=\"foto_r\" value='$consulta[11]' class=\"form-control\" >
+								<input type=\"text\" readonly=\"readonly\" name=\"foto_r\" value='$consulta[12]' class=\"form-control\" >
 								<img src='$consulta[12]'  width=\"400\" heigth=\"600\" name=\"foto_r\" />
 							</div>
 							<div class=\"col-md-4 mb-3\">
 								<label for=\"foto_r\">Foto-Credencial</label><br>
-								<input type=\"text\" readonly=\"readonly\" name=\"foto_c\" value='$consulta[12]' class=\"form-control\" >
+								<input type=\"text\" readonly=\"readonly\" name=\"foto_c\" value='$consulta[13]' class=\"form-control\" >
 								<img src='$consulta[13]'  width=\"400\" heigth=\"600\" name=\"foto_c\" />
 							</div>
 							<div class=\"col-md-4 mb-3\">
 								<label for=\"foto_v\">Foto-Vehiculo</label><br>
-								<input type=\"text\" readonly=\"readonly\" name=\"foto_v\" value='$consulta[13]' class=\"form-control\" >
+								<input type=\"text\" readonly=\"readonly\" name=\"foto_v\" value='$consulta[14]' class=\"form-control\" >
 								<img src='$consulta[14]'  width=\"400\" heigth=\"600\" name=\"foto_v\" />
 							</div>
 						</div>

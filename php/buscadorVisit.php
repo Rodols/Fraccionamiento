@@ -46,7 +46,7 @@ while ($consulta = mysqli_fetch_array($resultados)) {
                             <td width=\"185\" nowrap>" . $consulta['nombre_ref'] . '<br/>'.
                             '<span class="titulo">'.'Dir. ' . $consulta['calle'] .' #'. $consulta['numero'] .'</span>'."</td>
                             <td width=\"175\" nowrap>" . $consulta['motivo_visita'] . "</td>
-                            <td width=\"170\" nowrap>" . $consulta['observaciones'] . "</td>
+                            <td width=\"170\" nowrap>" . $consulta['observaciones_entrada'] . "</td>
                             <td width=\"120\" nowrap><a href='$consulta[imagen_rostro]'  name=\"foto_r\">* ImgRostro</a><br/>
                                 <a href='$consulta[imagen_credencial]'  name=\"foto_c\">* ImgCredencial</a><br/>
                                 <a href='$consulta[imagen_coche]'  name=\"foto_v\">* ImgCoche</a></td>
