@@ -20,13 +20,13 @@ if ($_SESSION['session_exito'] != 1) {
         </div>
     <div class="col-md-6" >
         <div id="marcoRegistro">
-        <form method="POST" action="registro.php" enctype="multipart/form-data">
+        <form method="POST" action="#" id="formEntrada" enctype="multipart/form-data">
             <div class="form-row">
                 <div class="col-md-4 mb-3">
                     <label for="cod">Código</label>
-                    <input type="text" name="cod" required="" class="form-control" id="cod">
+                    <input type="text" name="cod" required="required" class="form-control" id="cod">
                 </div>
-
+                <input type="hidden" id="vigilante" name="vigilante"  value='<?=$user?>'>
                 <div class="col-md-8 mb-3">
                     <label for="nombre">Nombre del visitante</label>
                     <input type="text" name="nombre" required="" class="form-control" id="nombre">
@@ -106,14 +106,12 @@ if ($_SESSION['session_exito'] != 1) {
                  <input type="file" class="form-control-file"  id="imagen_rostro" name="imagen_rostro">
             </div>
         </div>
-
                 <center>
-                    <br><input type="submit" value="Guardar" class="btn btn-success" name="btn1"><br>
+                    <br><input type="submit" value="Guardar" class="btn btn-success" name="btn1" onclick="guardarEntrada();"><br>
                 </center>
 
         </form>
     </div>
-    
 </div>
 
 <div class="col-md-3" >
@@ -137,8 +135,9 @@ if ($_SESSION['session_exito'] != 1) {
 </div>
 </div>
 <script type="text/javascript" src="../Js/registro.js"></script>
+<script type="text/javascript" src="../Js/entrada.js"></script>
 <?php
-if (isset($_POST['btn1'])) {
+if (isset($_POST['cod'])) {
     $codigo      = $_POST['cod'];
     $nombre      = $_POST['nombre'];
     $nombre_ref  = $_POST['nombre_referencia'];
