@@ -109,8 +109,11 @@ if ($_SESSION['session_exito'] != 1) {
                 <center>
                     <br><input type="submit" value="Guardar" class="btn btn-success" name="btn1"><br>
                 </center>
-
         </form>
+        <button onclick="CapturarPantalla();" value="Captura" class="btn btn-info" >Captura de Pantalla</button>
+        <div id="VistaEntrada">
+        
+        </div>
     </div>
 </div>
 
@@ -136,3 +139,4 @@ if ($_SESSION['session_exito'] != 1) {
 </div>
 <script type="text/javascript" src="../Js/registro.js"></script>
 <script type="text/javascript" src="../Js/entrada.js"></script>
+<script type="text/javascript" src="../Js/menu.js"></script>

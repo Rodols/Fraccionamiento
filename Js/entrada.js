@@ -29,4 +29,17 @@
 		        }
 		    });
 		    event.preventDefault();
-		});
+        });
+        
+        function CapturarPantalla(){
+            alert("Aqui toma la captura");
+            var btn = $("btncaptura").val();
+            $.ajax({
+                 url: "captura_pantalla.php",
+                 type: "POST",
+                 data: {btn},
+               success: function(response){ 
+               $("#VistaEntrada").html(response);
+               }
+            });
+          }
