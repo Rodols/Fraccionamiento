@@ -17,6 +17,15 @@ include_once '../plantillas/InicioDocumento.inc.php';
 				<center>
 					<h4 id="tabB"><br>Historial de visitas (Xalapa Ver, <?=$fechaActual;?>)</h4><br>
 					<form class="form-inline justify-content-center" id="formBuscarBita" method="POST" action="bitacora.php">
+						<div class=" form-group mx-1 mb-2" >
+						<h5>Colores: &nbsp;</h5><button type="buton" class="btn snt" >SnTarjeta</button>
+						</div>
+						<div class=" form-group mb-2" >
+							<button type="buton" class="btn alertyellow" >AlertaAmarilla</button>
+							<div class=" form-group mx-1">
+							<button type="buton" class="btn alertred" >AlertaRoja</button>
+						</div>
+						</div>
   						<div class="form-group mb-2 ">
     						<input type="text" class="form-control" name="busquedaB" id="buscarBitacora"  placeholder="Buscar">
  		 				</div>
@@ -33,7 +42,6 @@ include_once '../plantillas/InicioDocumento.inc.php';
 				</center>
 			</div>
 			<div class="col-md-3 ayuda" id="enlace">
-
 				<div class="card text-white bg-dark mb-2" id="cardBita" style="max-width: 15rem; display: none;">
   					<div class="card-header"><h5 class="card-title">¿Como buscar? </h5></div>
   					<div class="card-body">

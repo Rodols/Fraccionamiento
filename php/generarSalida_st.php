@@ -1,6 +1,7 @@
 <?php
 if (isset($_POST['cod'])) {
     $codigo      = $_POST['cod'];
+    $vigilante = $_POST['vigilante'];
     $nombre      = $_POST['nombre'];
     $nombre_ref  = $_POST['nombre_referencia'];
     $calle       = $_POST['select1'];
@@ -8,8 +9,10 @@ if (isset($_POST['cod'])) {
     $placas      = $_POST['placas'];
     $vehiculo      = $_POST['vehiculo'];
     $motivo      = $_POST['motivo'];
-    $vigilante = $_POST['vigilante'];
     $observacion = $_POST['observacion'];
+
+    $observacion_entrada="SnTarjeta";
+    $alerta="snt";
   
     $nameImageV = $_FILES['ImgCoche']['name'];
     if($nameImageV!=""){
@@ -35,16 +38,15 @@ if (isset($_POST['cod'])) {
     if ($motivo == "") {
         $motivo = "Visita";
     }
-    
 
     if (($numero != "") && ($codigo != "") && ($nombre != "") && ($motivo != "")) {
         include_once "abrir_conexion.php";
 
-        $registradoBd = $conexion->query("INSERT INTO $tabla_db1 (
-            codigo,usuario,fecha,entrada,nombre,nombre_ref,calle,numero,placas,vehiculo,motivo_visita,observaciones_entrada,
-            imagen_rostro,imagen_credencial,imagen_coche)
-             values ('$codigo','$vigilante',NOW(),NOW(),'$nombre','$nombre_ref','$calle','$numero','$placas','$vehiculo','$motivo',
-             '$observacion','$destinoR','$destinoC','$destinoV')");
+        $registradoBd = $conexion->query("INSERT INTO $tabla_db3 (
+            	visitante,codigo,usuario,fecha,entrada,salida,nombre,nombre_ref,calle,numero,placas,vehiculo,motivo_visita,observaciones_entrada,observaciones_salida,alerta,
+				imagen_rostro,imagen_credencial,imagen_coche)
+				 values (NULL,'$codigo','$vigilante',NOW(),NOW(),NOW(),'$nombre','$nombre_ref','$calle','$numero','$placas','$vehiculo','$motivo',
+				 '$observacion_entrada','$observacion','$alerta','$destinoR','$destinoC','$destinoV')");
         if ($registradoBd==true){
             echo "1";
         } else {

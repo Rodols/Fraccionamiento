@@ -19,19 +19,21 @@ if ($_SESSION['session_exito'] != 1) {
 			<div class="row">
 				<div class="col-md-3">
 					<form method="POST" class="form-inline" id="formSalida" action="consulta.php">
-						<div class="form-group mx-sm-3 mb-2">
+						<div class="form-group mx-sm-1 mb-2">
 							<input type="text" name="textoCod" size="13"  placeholder="Ingresa el codigo" required="" class="form-control" id="textoCod">
 						</div>
-		 				<input type="submit" value="Buscar" class="btn btn-info mb-2" name="btnConsulta">
-		   			</form>
+						 <input type="submit" value="Buscar" class="btn btn-info mb-2" name="btnConsulta">
+					   </form>
+					 <input type="submit" id="sntarjeta" onclick="registroSt();" value="Sn/Tarjeta" class="btn mb-2">	     
+				<input type="hidden" id="userName" name="vigilante"  value='<?=$user?>'>	   
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-8">
 					<div id="formVistaSalida"></div>
 				</div>
-			</div>
-			
+			</div>	
 	</div>
 <script src="../Js/salida.js"></script>
+<script type="text/javascript" src="../Js/registro.js"></script>
 <?php
 include_once '../plantillas/FinDocumento.inc.php';
 ?>

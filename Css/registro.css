@@ -92,9 +92,6 @@ td
       width: 98%;
       position: absolute;
     }
-  
-  
-    
 
 body {
     background-image: url("../Imagenes/skulls.png");
@@ -102,6 +99,15 @@ body {
     font-weight: bold;
 }
 
+#sntarjeta{
+    background-color: orange;
+    color: black;
+}
+
+.snt{
+    background-color: rgb(255, 193, 77) !important;
+    font-weight: bold;
+}
 
 #alertagreen{
     font-weight: bold;
@@ -116,6 +122,16 @@ body {
     font-weight: bold;
     color: rgb(255, 42, 42) !important;
 }
+
+.alertyellow{
+    font-weight: bold;
+    background-color: rgb(246, 246, 55) !important;
+}
+.alertred{
+    font-weight: bold;
+    background-color: rgb(255, 42, 42) !important;
+}
+
 
 .yellow{
     background-color: rgb(246, 246, 55) !important;
